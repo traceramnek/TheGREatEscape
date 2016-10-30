@@ -12,9 +12,9 @@ The game features various levels of difficulty, starting with easier words and w
 
 The gameplay of the GREat Escape comes in 2 parts: Collect/Learn, and Testing
 
-Collect/Learn sections fo the game are platformers where the player must collect all of the Books in the world in order to finish the level. They then learn the definitions of all the words they've collected and once that is over, they head to the Testing section.
+Collect/Learn sections of the game are platformers where the player must collect all of the Books in the world in order to finish the level. They then learn the definitions of all the words they've collected and once that is over, they head to the Testing section.
 
-Testing sections come in the form of Boss fights where the boss can only be defeated by correctly defining words in a certain time limit. IF this is completed the player defeats the Boss and continues on to the next Collect/Learn section.
+Testing sections come in the form of Boss fights where the Boss can only be defeated by correctly defining words in a certain time limit. IF this is completed the player defeats the Boss and continues on to the next Collect/Learn section.
 
 ## Specifications
 
