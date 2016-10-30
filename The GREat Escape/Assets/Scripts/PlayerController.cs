@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -13,6 +14,11 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed; // how fast the player moves 
 	public float jumpSpeed; // how high player jumps
+
+	public int numBooks;
+	public int maxBooks;
+
+	public Text numBooksCollected;
 
 	private Rigidbody2D myRigidBody; // rigid body used for moving and jumping
 	private Animator myAnim; // animator to set values to cause animations
@@ -32,6 +38,8 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D> (); // rigid body for physics
 		myAnim = GetComponent<Animator> (); // animator for anim changes
+		numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
+
 	}
 
 	// Update is called once per frame
@@ -88,6 +96,11 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		// handle respawn
+		if (other.tag == "Book") {
+			Destroy (other.gameObject);
+			numBooks++;
+			numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
+		}
 
 	}
 
