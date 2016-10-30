@@ -25,10 +25,10 @@ public class PlayerController : MonoBehaviour {
 
 	public Vector3 respawnPosition; // position where player respawns
 
-//	//variables for checking if player is on ground or not
-//	public Transform groundCheck;
-//	public float groundCheckRadius; // radius of ground check space
-//	public LayerMask whatIsGround;
+	//variables for checking if player is on ground or not
+	public Transform groundCheck;
+	public float groundCheckRadius; // radius of ground check space
+	public LayerMask whatIsGround;
 
 	public bool isGrounded; // know if player is on ground
 	public bool isJumping; // know if player is jumping
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-//		isGrounded = Physics2D.OverlapCircle (groundCheck.position,groundCheckRadius,whatIsGround);
+		isGrounded = Physics2D.OverlapCircle (groundCheck.position,groundCheckRadius,whatIsGround);
 
 		//HorizontaL input is either 0(no input), 1(going right), or -1(going left)
 
@@ -66,30 +66,30 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-//		// checking jump input(space or up)
-//		if (Input.GetButtonDown ("Jump") && isGrounded) {
-//			// put jumpSpeed in y to move up by moveSpeed
-//			myRigidBody.velocity = new Vector3 (myRigidBody.velocity.x, jumpSpeed, 0f);
-//			isJumping = true;
-//			myAnim.SetBool ("Jumping", true);
-//		}
-//		// if on the ground, set falling and jumping to false
-//		else if(isGrounded){ 
-//			myAnim.SetBool ("Jumping", false);
-//			isJumping = false;
-//			myAnim.SetBool ("Falling", false);
-//		}
+		// checking jump input(space or up)
+		if (Input.GetButtonDown ("Jump") && isGrounded) {
+			// put jumpSpeed in y to move up by moveSpeed
+			myRigidBody.velocity = new Vector3 (myRigidBody.velocity.x, jumpSpeed, 0f);
+			isJumping = true;
+			myAnim.SetBool ("Jumping", true);
+		}
+		// if on the ground, set falling and jumping to false
+		else if(isGrounded){ 
+			myAnim.SetBool ("Jumping", false);
+			isJumping = false;
+			myAnim.SetBool ("Falling", false);
+		}
 //
-//
-//		// if NOT on ground, and NOT jumping, then set falling to true
-//		if (!isGrounded && myAnim.GetBool ("Jumping") == false) {
-//			myAnim.SetBool ("Falling", true);
-//		}
+
+		// if NOT on ground, and NOT jumping, then set falling to true
+		if (!isGrounded && myAnim.GetBool ("Jumping") == false) {
+			myAnim.SetBool ("Falling", true);
+		}
 
 
 		//Sets variables in order to change animations
 		myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
-//		myAnim.SetBool ("Grounded", isGrounded);
+		myAnim.SetBool ("Grounded", isGrounded);
 
 	}
 
