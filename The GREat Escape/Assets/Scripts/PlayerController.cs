@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	 * 
 	*/
 
+	public GameButtons gameButton;// object so player can pause game
 
 	public float moveSpeed; // how fast the player moves 
 	public float jumpSpeed; // how high player jumps
@@ -32,7 +33,6 @@ public class PlayerController : MonoBehaviour {
 
 	public bool isGrounded; // know if player is on ground
 	public bool isJumping; // know if player is jumping
-	public bool isFalling; // know if player is falling;
 
 	// Use this for initialization
 	void Start () {
@@ -77,14 +77,16 @@ public class PlayerController : MonoBehaviour {
 		else if(isGrounded){ 
 			myAnim.SetBool ("Jumping", false);
 			isJumping = false;
-			myAnim.SetBool ("Falling", false);
-		}
-//
 
-		// if NOT on ground, and NOT jumping, then set falling to true
-		if (!isGrounded && myAnim.GetBool ("Jumping") == false) {
-			myAnim.SetBool ("Falling", true);
 		}
+
+		//if p is pressed, pause the game
+		if(Input.GetKeyDown (KeyCode.P) ){
+			gameButton.PauseGame ();
+		}
+
+
+//
 
 
 		//Sets variables in order to change animations
