@@ -102,6 +102,9 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject);
 			numBooks++;
 			numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
+			Collect c = other.GetComponent<Collect> ();
+			c.Sound ();
+
 		}
 
 	}
