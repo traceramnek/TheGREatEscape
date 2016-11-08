@@ -99,12 +99,14 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		// handle respawn
 		if (other.tag == "Book") {
-			Destroy (other.gameObject);
 			numBooks++;
 			numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 			Collect c = other.GetComponent<Collect> ();
 			c.Sound ();
 
+			other.GetComponent<SpriteRenderer> ().enabled = false;
+			other.GetComponent<BoxCollider2D> ().enabled = false;
+			Destroy (other.gameObject, 1);
 		}
 
 	}

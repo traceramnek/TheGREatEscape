@@ -36,6 +36,8 @@ GameObject:
   - 4: {fileID: 4000010960452022}
   - 212: {fileID: 212000011005134410}
   - 61: {fileID: 61000013160779330}
+  - 82: {fileID: 82000012529468454}
+  - 114: {fileID: 114000013407089802}
   m_Layer: 0
   m_Name: Book
   m_TagString: Book
@@ -52,7 +54,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012410413208}
   - 114: {fileID: 114000012822128420}
-  - 82: {fileID: 82000013169769790}
   m_Layer: 0
   m_Name: MovingBook
   m_TagString: Book
@@ -144,17 +145,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.48}
---- !u!82 &82000013169769790
+--- !u!82 &82000012529468454
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013483176850}
+  m_GameObject: {fileID: 1000011292210910}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 055427a99797d4c6d9453c28f7872639, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -233,6 +234,18 @@ MonoBehaviour:
   startPoint: {fileID: 4000011777868880}
   endPoint: {fileID: 4000013326932590}
   moveSpeed: 0.7
+--- !u!114 &114000013407089802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011292210910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b9334e54e79411184c4bd504b24c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioS: {fileID: 0}
 --- !u!212 &212000011005134410
 SpriteRenderer:
   m_ObjectHideFlags: 1
