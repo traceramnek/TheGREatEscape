@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
 	public int maxBooks;
 
 	public Text numBooksCollected;
+	public Text wordDisplay;
 
 	private Rigidbody2D myRigidBody; // rigid body used for moving and jumping
 	private Animator myAnim; // animator to set values to cause animations
@@ -109,7 +110,11 @@ public class PlayerController : MonoBehaviour {
 
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 			other.GetComponent<BoxCollider2D> ().enabled = false;
+
+			wordDisplay.text = "Some Random Text"; //Should take word from book
 			Destroy (other.gameObject, 1);
+
+			Time.timeScale = 0.0f;
 		}
 
 	}

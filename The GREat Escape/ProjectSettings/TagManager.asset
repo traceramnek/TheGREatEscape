@@ -9,6 +9,7 @@ TagManager:
   - Book
   - WhenPaused
   - WhenResumed
+  - WordDisplay
   layers:
   - Default
   - TransparentFX

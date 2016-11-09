@@ -47,6 +47,11 @@ public class GameButtons : MonoBehaviour {
 			resmd.SetActive (true);
 	}
 
+	public void ClearWordDisplay() {
+		GameObject.FindGameObjectWithTag ("WordDisplay").GetComponent<Text> ().text = "";
+		ResumeGame ();
+	}
+
 	public void Menu()
 	{
 		SceneManager.LoadScene ("Menu");
