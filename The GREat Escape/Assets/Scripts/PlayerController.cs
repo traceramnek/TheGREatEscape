@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour {
 	public bool isGrounded; // know if player is on ground
 	public bool isJumping; // know if player is jumping
 
+	public AudioSource jumpSound; //sound of player jumping
+
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D> (); // rigid body for physics
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour {
 		// checking jump input(space or up)
 		if (Input.GetButtonDown ("Jump") && isGrounded) {
 			// put jumpSpeed in y to move up by moveSpeed
+			jumpSound.Play();
 			myRigidBody.velocity = new Vector3 (myRigidBody.velocity.x, jumpSpeed, 0f);
 			isJumping = true;
 			myAnim.SetBool ("Jumping", true);
