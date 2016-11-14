@@ -11,6 +11,8 @@ public class MenuButtons : MonoBehaviour {
 
 	public void GoToInstructions(){
 		SceneManager.LoadScene ("Instructions");
+		// continue animation for instructions scene
+		Time.timeScale = 1f;
 	}
 
 	public void Settings(){

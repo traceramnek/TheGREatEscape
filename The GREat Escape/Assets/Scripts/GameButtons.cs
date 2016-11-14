@@ -8,8 +8,11 @@ public class GameButtons : MonoBehaviour {
 	public GameObject[] showIfPaused;
 	public GameObject[] showIfResumed;
 
+
 	// Use this for initialization
 	void Start () {
+		
+
 		//populate array with relevant objects to show when game is paused
 		showIfPaused = GameObject.FindGameObjectsWithTag("WhenPaused");
 		foreach (GameObject psed in showIfPaused)
@@ -28,6 +31,7 @@ public class GameButtons : MonoBehaviour {
 
 	public void PauseGame(){
 		Time.timeScale = 0.0f;
+
 
 		foreach (GameObject psed in showIfPaused)
 			psed.SetActive (true);
