@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour {
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 			other.GetComponent<BoxCollider2D> ().enabled = false;
 
-			wordDisplay.text = "Some Random Text"; //Should take word from book
+			wordDisplay.text = "Word\n\nDefinition\n\nSentence"; //Should take word from book
 			Destroy (other.gameObject, 1);
 
 			Time.timeScale = 0.0f;
