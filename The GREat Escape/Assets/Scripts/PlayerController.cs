@@ -37,12 +37,14 @@ public class PlayerController : MonoBehaviour {
 
 	public AudioSource jumpSound; //sound of player jumping
 
+	public bool isPaused;
+
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D> (); // rigid body for physics
 		myAnim = GetComponent<Animator> (); // animator for anim changes
 		numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
-
+		isPaused = false;
 	}
 
 	// Update is called once per frame
@@ -85,9 +87,18 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//if p is pressed, pause the game
-		if(Input.GetKeyDown (KeyCode.P) ){
-			gameButton.PauseGame ();
+		if(Input.GetKeyDown (KeyCode.P)){
+			if (!isPaused) {
+				isPaused = true;
+				gameButton.PauseGame ();
+			} else {
+				isPaused = false;
+				gameButton.ResumeGame ();
+			}
+
 		}
+
+
 
 
 //
