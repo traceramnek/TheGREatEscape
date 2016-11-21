@@ -82,6 +82,7 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
+'Assets/Scripts/BookScript.cs'
 'Assets/Scripts/CameraController.cs'
 'Assets/Scripts/Collect.cs'
 'Assets/Scripts/GameButtons.cs'
@@ -89,6 +90,5 @@
 'Assets/Scripts/MessagePanel.cs'
 'Assets/Scripts/MovingObject.cs'
 'Assets/Scripts/PlayerController.cs'
-'Assets/Scripts/Vocab.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'

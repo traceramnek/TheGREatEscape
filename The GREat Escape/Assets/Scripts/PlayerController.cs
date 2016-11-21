@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	*/
 
 	public GameButtons gameButton;// object so player can pause game
+	//public BookScript currBook;
 
 	public float moveSpeed; // how fast the player moves 
 	public float jumpSpeed; // how high player jumps
@@ -147,7 +148,9 @@ public class PlayerController : MonoBehaviour {
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 			other.GetComponent<BoxCollider2D> ().enabled = false;
 
-				wordDisplay.text = pickWord(); //Should take word from book
+			//currBook = other.GetComponent<BookScript> ();
+
+			wordDisplay.text = pickWord ();  //Should take word from book
 			Destroy (other.gameObject, 1);
 
 			Time.timeScale = 0.0f;

@@ -82,6 +82,7 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
+'Assets/Scripts/BookScript.cs'
 'Assets/Scripts/CameraController.cs'
 'Assets/Scripts/Collect.cs'
 'Assets/Scripts/GameButtons.cs'
