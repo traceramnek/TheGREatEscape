@@ -81,7 +81,7 @@ public class BookScript : MonoBehaviour {
 			reviewWords.Add (words [i]); // add only the words that were picked;
 		}
 	}
-	public void getReviewWords(){
+	public List<string> getReviewWords(){
 		return reviewWords;
 	}
 

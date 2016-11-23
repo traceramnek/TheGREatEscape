@@ -26,7 +26,7 @@ public class GameButtons : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		//Button key press instead of click
 	}
 
 	public void PauseGame(){

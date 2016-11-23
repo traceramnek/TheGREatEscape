@@ -471,6 +471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5050a871d8b264a98a91026dcc0f44e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  words: []
+  reviewWords: []
+  reviewIndices: 
 --- !u!4 &41138381
 Transform:
   m_ObjectHideFlags: 0
@@ -606,6 +609,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 102678392}
+--- !u!4 &194140326 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011777868880, guid: d08adc0c66aa04297920dee405d86cb6,
+    type: 2}
+  m_PrefabInternal: {fileID: 745278973}
 --- !u!1 &219808237
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1002,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277699518}
+--- !u!1 &428842041 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011292210910, guid: d08adc0c66aa04297920dee405d86cb6,
+    type: 2}
+  m_PrefabInternal: {fileID: 745278973}
 --- !u!1 &429048641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1431,21 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 21.25
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012822128420, guid: d08adc0c66aa04297920dee405d86cb6,
+        type: 2}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 194140326}
+    - target: {fileID: 114000012822128420, guid: d08adc0c66aa04297920dee405d86cb6,
+        type: 2}
+      propertyPath: endPoint
+      value: 
+      objectReference: {fileID: 1163367166}
+    - target: {fileID: 114000012822128420, guid: d08adc0c66aa04297920dee405d86cb6,
+        type: 2}
+      propertyPath: objectToMove
+      value: 
+      objectReference: {fileID: 428842041}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08adc0c66aa04297920dee405d86cb6, type: 2}
   m_IsPrefabParent: 0
@@ -1972,6 +2000,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d67b0c7e6a1fb4b19857ef53d2f9626c, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1163367166 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013326932590, guid: d08adc0c66aa04297920dee405d86cb6,
+    type: 2}
+  m_PrefabInternal: {fileID: 745278973}
 --- !u!1 &1228886036
 GameObject:
   m_ObjectHideFlags: 0
