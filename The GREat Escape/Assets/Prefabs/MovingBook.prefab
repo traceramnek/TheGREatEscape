@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012410413208}
   - 114: {fileID: 114000012822128420}
-  - 114: {fileID: 114000010737294156}
   m_Layer: 0
   m_Name: MovingBook
   m_TagString: Book
@@ -220,17 +219,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114000010737294156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013483176850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5050a871d8b264a98a91026dcc0f44e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012822128420
 MonoBehaviour:
   m_ObjectHideFlags: 1

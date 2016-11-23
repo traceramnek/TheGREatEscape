@@ -3,13 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BookScript : MonoBehaviour {
+	const int NUM_REVIEW_WORDS = 4;
 
-	public static BookScript Instance;
+	public static BookScript bookControl;
 
 	// list of all the words
-	string[] words;
+	public string[] words;
+	public List<string> reviewWords;
 	// indices of already picked books so they aren't reused and can be accessed for review
-	List<int> reviewIndices; 
+	public List<int> reviewIndices; 
+
+
+	void Awake(){
+		if (bookControl == null) {
+			DontDestroyOnLoad (gameObject);
+			bookControl = this;
+		} else {
+			Destroy (gameObject);
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +47,7 @@ public class BookScript : MonoBehaviour {
 		};
 
 		reviewIndices = new List<int>();
+		reviewWords = new List<string> ();
 	}
 	
 	// Update is called once per frame
@@ -61,6 +74,15 @@ public class BookScript : MonoBehaviour {
 			}
 		}
 		return false;
+	}
+
+	public void setReviewWords(){
+		foreach (int i in reviewIndices) {
+			reviewWords.Add (words [i]); // add only the words that were picked;
+		}
+	}
+	public void getReviewWords(){
+		return reviewWords;
 	}
 
 }
