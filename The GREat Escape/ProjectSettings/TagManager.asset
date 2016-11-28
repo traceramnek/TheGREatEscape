@@ -10,6 +10,7 @@ TagManager:
   - WhenPaused
   - WhenResumed
   - WordDisplay
+  - Review
   layers:
   - Default
   - TransparentFX

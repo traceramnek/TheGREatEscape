@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class BookScript : MonoBehaviour {
+	
 	const int NUM_REVIEW_WORDS = 4;
 
 	public static BookScript bookControl;
@@ -13,6 +15,9 @@ public class BookScript : MonoBehaviour {
 	// indices of already picked books so they aren't reused and can be accessed for review
 	public List<int> reviewIndices; 
 
+	public int numBooks;
+	public int maxBooks;
+	public Text numBooksCollected;
 
 	void Awake(){
 		if (bookControl == null) {
@@ -48,11 +53,20 @@ public class BookScript : MonoBehaviour {
 
 		reviewIndices = new List<int>();
 		reviewWords = new List<string> ();
+//		numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+ 
+
+	//increment book count and change the text
+	public void updateBookTracker(){
+		numBooks++;
+		numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 	}
 
 	public string pickWord(){
