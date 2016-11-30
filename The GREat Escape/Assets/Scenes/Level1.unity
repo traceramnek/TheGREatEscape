@@ -3422,6 +3422,26 @@ Prefab:
       propertyPath: m_Name
       value: StoneGround1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.016918808
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.3661624
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.0053053675
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.1893892
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b199ebef12eca4cedb465671905a0b3c, type: 2}
   m_IsPrefabParent: 0
