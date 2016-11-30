@@ -12,11 +12,12 @@ public class HealthBar : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		current = 50;
+		content.fillAmount = Map (current, 0, 50, 0, 1);
+
 	}
 	
 	// Update is called once per frame
 	public void Update () {
-		content.fillAmount = Map (current, 0, 50, 0, 1);
 
 	}
 
@@ -27,7 +28,7 @@ public class HealthBar : MonoBehaviour {
 
 	public void changeBar(int change){
 		current = current - change;
-		Update ();
+		content.fillAmount = Map (current, 0, 50, 0, 1);
 	}
 		
 }

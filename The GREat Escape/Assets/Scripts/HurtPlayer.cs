@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HurtPlayer : MonoBehaviour {
 	// Use this for initialization
 
-	HealthBar Health;
+	public HealthBar Health;
 	void Start () {
 		Health = FindObjectOfType<HealthBar> ();
 	}
@@ -15,9 +15,10 @@ public class HurtPlayer : MonoBehaviour {
 	
 	}
 
-	void onTriggerEnter2D(Collider2D other){
+	void OnTriggerEnter2D(Collider2D other){
+		Debug.Log ("COLLIDE");
 		if (other.tag == "Player")
 			Health.changeBar(10);
-	}
+	} 
 		
 }
