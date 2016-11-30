@@ -12,6 +12,9 @@ TagManager:
   - WordDisplay
   - Review
   - Door
+  - BeginLevel
+  - Objective
+  - BeforeReview
   layers:
   - Default
   - TransparentFX

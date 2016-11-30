@@ -160,8 +160,10 @@ public class PlayerController : MonoBehaviour {
 		}
 		if (other.tag == "Door") {
 			if (BookScript.bookControl.numBooks == BookScript.bookControl.maxBooks) {
-				BookScript.bookControl.setReviewWords ();
-				SceneManager.LoadScene ("Review1");
+//				if (Input.GetKeyDown(KeyCode.UpArrow)) {
+					BookScript.bookControl.setReviewWords ();
+					SceneManager.LoadScene ("Review1");
+//				}
 			}
 		}
 
