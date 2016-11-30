@@ -21,7 +21,7 @@ public class ReviewScript : MonoBehaviour {
 //			
 //			reviewwords [i].text = BookScript.bookControl.reviewWords [i];
 //		}
-		reviewTitle.text = "Word Review!";
+		reviewTitle.text = "Word Review";
 
 		revWord1.text = BookScript.bookControl.reviewWords[0];
 		revWord2.text = BookScript.bookControl.reviewWords[1];
