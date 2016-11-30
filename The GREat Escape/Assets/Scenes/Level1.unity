@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1490052, g: 0.38235295, b: 0.20854907, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3179,6 +3179,26 @@ Prefab:
     - target: {fileID: 1000012486390952, guid: b199ebef12eca4cedb465671905a0b3c, type: 2}
       propertyPath: m_Name
       value: StoneGround1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.016918808
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.3661624
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.0053053675
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012223785994, guid: b199ebef12eca4cedb465671905a0b3c,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.1893892
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b199ebef12eca4cedb465671905a0b3c, type: 2}
