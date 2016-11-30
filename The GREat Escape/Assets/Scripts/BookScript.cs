@@ -46,7 +46,7 @@ public class BookScript : MonoBehaviour {
 			"Dissonance: A lack of agreement.\n\n There is a great deal of dissonance between what a liar says and does.",
 			"Goad: Prove or annoy so as to stimulate some action or reaction.\n\n Jordan tried to goad his daughter into doing her chores by freezing her allowance payments.",
 			"Abscond: Run away, often taking something or somebody along.\n\n He made plans to abscond with the stolen money.",
-			"Distend: Cause to expand as if my iternal pressure.\n\n The excess food consumption made her stomach distend from bloat.",
+			"Distend: Cause to expand as if by iternal pressure.\n\n The excess food consumption made her stomach distend from bloat.",
 			"Gouge: An impression in a surface, as made by a blow.\n\n The channel had been gouged out by the ebbing water.",
 
 		};
