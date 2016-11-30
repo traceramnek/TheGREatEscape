@@ -105,10 +105,11 @@ public class PlayerController : MonoBehaviour {
 		myAnim.SetFloat("Speed", Mathf.Abs(myRigidBody.velocity.x));
 		myAnim.SetBool ("Grounded", isGrounded);
 
-		if (BookScript.bookControl.numBooks == BookScript.bookControl.maxBooks) {
-			BookScript.bookControl.setReviewWords ();
-			SceneManager.LoadScene ("Review1");
-		}
+//		if (BookScript.bookControl.numBooks == BookScript.bookControl.maxBooks) {
+//
+//				BookScript.bookControl.setReviewWords ();
+//				SceneManager.LoadScene ("Review1");
+//		}
 
 	}
 
@@ -156,6 +157,12 @@ public class PlayerController : MonoBehaviour {
 			Destroy (other.gameObject, 1);
 
 			Time.timeScale = 0.0f;
+		}
+		if (other.tag == "Door") {
+			if (BookScript.bookControl.numBooks == BookScript.bookControl.maxBooks) {
+				BookScript.bookControl.setReviewWords ();
+				SceneManager.LoadScene ("Review1");
+			}
 		}
 
 	}

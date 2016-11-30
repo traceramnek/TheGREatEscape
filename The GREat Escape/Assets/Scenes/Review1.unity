@@ -150,7 +150,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.455162
+  orthographic size: 5.6604977
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -209,7 +209,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45, y: 185}
+  m_AnchoredPosition: {x: -45, y: 129}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127003659
@@ -283,7 +283,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.000626, y: -173}
+  m_AnchoredPosition: {x: -45.000626, y: -229.00018}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225105687
@@ -533,7 +533,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.000626, y: -48}
+  m_AnchoredPosition: {x: -45.000626, y: -104}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206758568
@@ -647,7 +647,6 @@ GameObject:
   - 224: {fileID: 1931993345}
   - 222: {fileID: 1931993348}
   - 114: {fileID: 1931993347}
-  - 114: {fileID: 1931993346}
   m_Layer: 5
   m_Name: ReviewTitle
   m_TagString: Untagged
@@ -673,23 +672,6 @@ RectTransform:
   m_AnchoredPosition: {x: 18, y: 254}
   m_SizeDelta: {x: 808, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1931993346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1931993344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5050a871d8b264a98a91026dcc0f44e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  words: []
-  reviewWords: []
-  reviewIndices: 
-  numBooks: 0
-  maxBooks: 0
-  numBooksCollected: {fileID: 0}
 --- !u!114 &1931993347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,7 +743,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.000614, y: 73}
+  m_AnchoredPosition: {x: -45.000614, y: 17}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005893699

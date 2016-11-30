@@ -11,6 +11,7 @@ TagManager:
   - WhenResumed
   - WordDisplay
   - Review
+  - Door
   layers:
   - Default
   - TransparentFX
