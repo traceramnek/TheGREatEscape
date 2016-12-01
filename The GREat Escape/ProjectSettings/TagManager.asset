@@ -15,6 +15,7 @@ TagManager:
   - BeginLevel
   - Objective
   - BeforeReview
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
