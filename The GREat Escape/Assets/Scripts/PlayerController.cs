@@ -169,6 +169,21 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+	void OnCollisionEnter2D(Collision2D other){
+		//handle player on moving platforms, so it doesn't slide off
+		if (other.gameObject.tag == "MovingPlatform") {
+			//make player's parent the platform to move player at same speed
+			transform.parent = other.transform;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other){
+
+		if (other.gameObject.tag == "MovingPlatform") {
+			transform.parent = null; // stop making the platform a parent
+		}
+	}
+
 
 
 
