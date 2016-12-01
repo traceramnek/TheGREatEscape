@@ -5,15 +5,15 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour {
 	
 	public float fillAmount=1;
-
 	public Image content;
+    public Text NameText;
 	float current;
 
 	// Use this for initialization
 	void Start () {
 		current = 50;
 		content.fillAmount = Map (current, 0, 50, 0, 1);
-
+        NameText.text = PlayerPrefs.GetString("CurrentPlayer");
 	}
 	
 	// Update is called once per frame
