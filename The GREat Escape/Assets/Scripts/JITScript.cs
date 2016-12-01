@@ -21,11 +21,11 @@ public class JITScript : MonoBehaviour { // JUST IN TIME INSTRUCTIONS
 		if (other.tag == "Player") {
 			switch (this.tag) {
 			case "BeginLevel":
-				wordDisplay.text = "Press the left and right arrow to move \n Use spacebar to jump";
+				wordDisplay.text = "Press the left and right arrow to move \n\nUse spacebar to jump";
 				Time.timeScale = 0.0f;
 				break;
 			case "Objective":
-				wordDisplay.text = "Collect all of the books in the word and study their contents \n\n Watch out for enemies and dangerous objects";
+				wordDisplay.text = "Collect all of the books in the word and study their contents \n\nWatch out for enemies and dangerous objects";
 				Time.timeScale = 0.0f;
 				break;
 			case "BeforeReview":
