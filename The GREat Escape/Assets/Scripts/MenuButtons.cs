@@ -6,8 +6,14 @@ public class MenuButtons : MonoBehaviour {
 
 	public void PlayGame()
 	{
-		SceneManager.LoadScene ("Level1");
+		SceneManager.LoadScene ("EnterName");
 	}
+
+    public void ResumeGame()
+    {
+        
+        SceneManager.LoadScene("Level1");
+    }
 
 	public void GoToBoss(){
 		SceneManager.LoadScene ("Boss Battle");
@@ -25,6 +31,7 @@ public class MenuButtons : MonoBehaviour {
 
 	public void QuitGame()
 	{
+        PlayerPrefs.DeleteKey("CurrentPlayer");
 		Application.Quit ();
 	}
 }
