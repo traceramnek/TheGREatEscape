@@ -34,4 +34,12 @@ public class MenuButtons : MonoBehaviour {
         PlayerPrefs.DeleteKey("CurrentPlayer");
 		Application.Quit ();
 	}
+
+	public void GoToWelcome(){
+		SceneManager.LoadScene ("Welcome");
+	}
+	public void GoToEnterName(){
+		SceneManager.LoadScene ("EnterName");
+	}
+
 }

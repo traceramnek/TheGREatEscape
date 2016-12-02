@@ -8,7 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
   - enabled: 1
+    path: Assets/Scenes/EnterName.unity
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
+  - enabled: 1
+    path: Assets/Scenes/Review1.unity
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+  - enabled: 1
+    path: Assets/Scenes/Boss Battle.unity
   - enabled: 1
     path: Assets/Scenes/Menu.unity
   - enabled: 1
@@ -16,8 +24,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
   - enabled: 1
-    path: Assets/Scenes/Review1.unity
-  - enabled: 1
-    path: Assets/Scenes/Boss Battle.unity
-  - enabled: 1
-    path: Assets/Scenes/EnterName.unity
+    path: Assets/Scenes/Welcome.unity
