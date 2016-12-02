@@ -16,6 +16,9 @@ TagManager:
   - Objective
   - BeforeReview
   - MovingPlatform
+  - Boss
+  - KillPlane
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

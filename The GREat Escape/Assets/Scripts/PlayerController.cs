@@ -165,6 +165,16 @@ public class PlayerController : MonoBehaviour {
 					SceneManager.LoadScene ("Review1");
 //				}
 			}
+		
+		}
+		if (other.tag == "KillPlane") {
+		//	gameObject.SetActive (false);
+
+			transform.position = respawnPosition;
+		}
+
+		if (other.tag == "Checkpoint") {
+			respawnPosition = other.transform.position;
 		}
 
 	}
