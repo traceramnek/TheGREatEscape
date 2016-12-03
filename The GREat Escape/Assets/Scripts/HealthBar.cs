@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class HealthBar : MonoBehaviour {
 	
@@ -29,6 +31,9 @@ public class HealthBar : MonoBehaviour {
 	public void changeBar(int change){
 		current = current - change;
 		content.fillAmount = Map (current, 0, 50, 0, 1);
+
+		if (current==0)
+			SceneManager.LoadScene ("Gameover");
 	}
 		
 }
