@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JITScript : MonoBehaviour { 
 	// JUST IN TIME INSTRUCTIONS
@@ -37,7 +38,12 @@ public class JITScript : MonoBehaviour {
 				wordDisplay.text = "Get ready to battle the boss\n\n Answer the questions and keep an eye on your health meter";
 				Time.timeScale = 0.0f;
 				break;
+
+			case "Level2JIT":
+				SceneManager.LoadScene("Level2");
+				break;
 			}
+
 
 		}
 	}
