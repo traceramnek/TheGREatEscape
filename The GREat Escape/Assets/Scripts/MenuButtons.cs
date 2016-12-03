@@ -19,6 +19,10 @@ public class MenuButtons : MonoBehaviour {
 		SceneManager.LoadScene ("Boss Battle");
 	}
 
+	public void GoToBoss2(){
+		SceneManager.LoadScene ("Boss Battle 2");
+	}
+
 	public void GoToInstructions(){
 		SceneManager.LoadScene ("Instructions");
 		// continue animation for instructions scene
