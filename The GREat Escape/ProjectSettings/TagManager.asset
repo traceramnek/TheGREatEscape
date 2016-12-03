@@ -19,6 +19,7 @@ TagManager:
   - Boss
   - KillPlane
   - Checkpoint
+  - BossJIT
   layers:
   - Default
   - TransparentFX

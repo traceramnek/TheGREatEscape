@@ -22,6 +22,7 @@ public class StompEnemy : MonoBehaviour {
 
 		if (other.tag == "Boss") {
 			wordDisplay.text = "Multiple Choice";
+			Time.timeScale = 0.0f;
 		}
 
 	}

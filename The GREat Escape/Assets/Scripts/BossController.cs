@@ -1,36 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour {
-	public float moveSpeed;
 
-	public Transform leftPoint;
-	public Transform rightPoint;
+	public Transform target;
+	public float speed = 2f;
+	private float minDistance = 1f;
+	private float range;
+	bool canMove;
 
-	private Rigidbody2D myRigidbody;
+	void Update ()
+	{
+		range = Vector2.Distance(transform.position, target.position);
 
-	public bool movingRight;
+		if (range > minDistance && canMove)
+		{
 
-	// Use this for initialization
-	void Start () {
-		myRigidbody = GetComponent<Rigidbody2D> ();	
+			transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);	
+		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-		if (movingRight && transform.position.x > rightPoint.position.x) {
-			movingRight = false;
-		}
-
-		if (!movingRight && transform.position.x < leftPoint.position.x) {
-			movingRight = true;
-		}
-
-		if (movingRight)
-			myRigidbody.velocity = new Vector3 (moveSpeed, myRigidbody.velocity.y, 0f);
-		else
-			myRigidbody.velocity=new Vector3 (-moveSpeed, myRigidbody.velocity.y, 0f);
-
+	void OnBecameVisible(){
+		canMove = true;
 	}
-
 }
