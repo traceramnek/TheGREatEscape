@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BookScript : MonoBehaviour {
 	
 	const int NUM_REVIEW_WORDS = 4;
 
 	public static BookScript bookControl;
+	public static int levelCount; // which level the player is on
 
 	// list of all the words
 	public string[] words;
@@ -26,10 +28,14 @@ public class BookScript : MonoBehaviour {
 		} else {
 			Destroy (gameObject);
 		}
+			
 	}
+
 
 	// Use this for initialization
 	void Start () {
+		levelCount = 1;
+
 		words = new string[] {
 			"Abate: Become less in amount or intensity. \n \n In an hour or so the storm would abate and they could leave.",
 			"Chicanery: The use of tricks to decieve someone. \n\n Instead of being truthful on his campaign for sheriff, he resorted to chicanery.",
@@ -54,15 +60,17 @@ public class BookScript : MonoBehaviour {
 		reviewIndices = new List<int>();
 		reviewWords = new List<string> ();
 //		numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
-
+		numBooksCollected = GameObject.Find("BookScore").GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
  
-
+	public void updateLevelCount(){
+		levelCount++;
+	}
 	//increment book count and change the text
 	public void updateBookTracker(){
 		numBooks++;
@@ -78,6 +86,12 @@ public class BookScript : MonoBehaviour {
 		reviewIndices.Add (randomNumber); // add it to the list so it won't be picked more than once
 			
 		return words [randomNumber];
+	}
+	public void ResetBooks(){
+		numBooks = 0;
+		reviewWords.Clear ();
+			
+		
 	}
 
 	public bool isWordUsed (int wordIndex){
@@ -98,5 +112,11 @@ public class BookScript : MonoBehaviour {
 	public List<string> getReviewWords(){
 		return reviewWords;
 	}
+
+	public bool numBooksCheck(){
+		return ( (numBooks % 4) == 0 ) ? true : false;
+	}
+
+
 
 }

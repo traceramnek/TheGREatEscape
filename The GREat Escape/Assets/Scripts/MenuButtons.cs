@@ -42,8 +42,13 @@ public class MenuButtons : MonoBehaviour {
 	public void GoToWelcome(){
 		SceneManager.LoadScene ("Welcome");
 	}
+
 	public void GoToEnterName(){
 		SceneManager.LoadScene ("EnterName");
 	}
 
+	public void GoToNextLevel(){
+		//BookScript.bookControl.ResetBooks ();
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // go to next level in game
+	}
 }
