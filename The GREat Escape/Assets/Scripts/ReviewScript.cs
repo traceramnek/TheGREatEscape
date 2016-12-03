@@ -23,7 +23,7 @@ public class ReviewScript : MonoBehaviour {
 //		}
 		reviewTitle.text = "Word Review";
 
-		switch(reviewNum){
+		switch (reviewNum) {
 		case 1:	
 			revWord1.text = BookScript.bookControl.reviewWords [0];
 			revWord2.text = BookScript.bookControl.reviewWords [1];
@@ -39,10 +39,12 @@ public class ReviewScript : MonoBehaviour {
 		default:
 			// nothing
 			break;
+		}
+	}
 
-			public static void updateReviewNum(){
-				reviewNum++;
-			}
+	public static void updateReviewNum(){
+			reviewNum++;
+		
 	}
 	
 	// Update is called once per frame
