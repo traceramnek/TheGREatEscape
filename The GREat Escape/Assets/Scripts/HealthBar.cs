@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour {
 	public float fillAmount=1;
 	public Image content;
     public Text NameText;
-	float current;
+	public float current;
 
 	// Use this for initialization
 	void Start () {
