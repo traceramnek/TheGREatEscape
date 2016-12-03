@@ -8,12 +8,12 @@ public class SettingsScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		volumeSlider = GetComponent<Slider> ();
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		AudioListener.volume = volumeSlider.value;
 	}
 		
 	public void toggleFullscreen(){
