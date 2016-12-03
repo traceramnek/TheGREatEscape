@@ -26,6 +26,7 @@ public class PersistenceSceneController : MonoBehaviour {
         PlayerData.posX = Player.transform.position.x;
         PlayerData.posY = Player.transform.position.y;
         PlayerData.health = Player.GetComponent<PlayerController>().health.current;
+        PlayerData.booksCollected = Player.GetComponent<PlayerController>().bookNames.ToArray();
 
         return PlayerData;
     }
@@ -40,6 +41,12 @@ public class PersistenceSceneController : MonoBehaviour {
             //Load the data
             Player.transform.position = new Vector3(PlayerData.posX, PlayerData.posY, Player.transform.position.z);
             HealthBar.GetComponent<HealthBar>().changeBar(50 - (int)PlayerData.health);
+            foreach(string name in PlayerData.booksCollected)
+            {
+                Destroy(GameObject.Find(name));
+            }
+
+            PersistenceManager.Instance.Delete(PlayerPersistantData.NameOfFile);
         }
     }
 }
