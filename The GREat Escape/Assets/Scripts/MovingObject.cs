@@ -17,7 +17,7 @@ public class MovingObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentTarget = endPoint.position; // start currTarget as endpoint
-
+        objectToMove.name = gameObject.name;
 	}
 
 	// Update is called once per frame
