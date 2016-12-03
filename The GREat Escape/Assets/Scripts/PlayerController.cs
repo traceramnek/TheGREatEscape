@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour {
 			Time.timeScale = 0.0f;
 		}
 		if (other.tag == "Door") {
-			if (BookScript.bookControl.numBooks == BookScript.bookControl.maxBooks) {
+			if (BookScript.bookControl.numBooksCheck()) {
 //				if (Input.GetKeyDown(KeyCode.UpArrow)) {
 					BookScript.bookControl.setReviewWords ();
 					SceneManager.LoadScene ("Review1");
