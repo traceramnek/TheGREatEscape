@@ -26,7 +26,9 @@ public class BookScript : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);
 			bookControl = this;
 		} else {
-			Destroy (gameObject);
+            numBooks = bookControl.numBooks - 1;
+            updateBookTracker();
+            Destroy (gameObject);
 		}
 			
 	}
@@ -74,7 +76,8 @@ public class BookScript : MonoBehaviour {
 	//increment book count and change the text
 	public void updateBookTracker(){
 		numBooks++;
-		numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
+        numBooksCollected = GameObject.Find("BookScore").GetComponent<Text>();
+        numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 	}
 
 	public string pickWord(){

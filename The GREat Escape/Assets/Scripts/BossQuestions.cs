@@ -17,14 +17,11 @@ public class BossQuestions : MonoBehaviour {
 		questionsAnswers = new SortedDictionary<string, string> ();
 		delim = ':';
 		delim2 = '.';
-<<<<<<< HEAD
 	//	answerOptions = new List<string>[NumOptions];
-=======
 		answerOptions = new List<string> ();
 
 		parseWords ();
 		setWordOptions ();
->>>>>>> origin/master
 	}
 	
 	// Update is called once per frame
