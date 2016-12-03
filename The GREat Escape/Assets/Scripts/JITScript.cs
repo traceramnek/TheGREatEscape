@@ -34,7 +34,7 @@ public class JITScript : MonoBehaviour {
 				Time.timeScale = 0.0f;
 				break;
 			case "BossJIT":
-				wordDisplay.text = "Get ready to battle the boss!\n\n Answer the questions and keep an eye on your health meter!";
+				wordDisplay.text = "Get ready to battle the boss\n\n Answer the questions and keep an eye on your health meter";
 				Time.timeScale = 0.0f;
 				break;
 			}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -43,6 +44,8 @@ public class PlayerController : MonoBehaviour {
 
 	public HealthBar health;
 
+	public List<string> bookNames;
+
 	// Use this for initialization
 	void Start () {
 		health = FindObjectOfType<HealthBar> ();
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour {
 		myAnim = GetComponent<Animator> (); // animator for anim changes
 		//numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 		isPaused = false;
+		bookNames = new List<string> ();
 	}
 
 	// Update is called once per frame
@@ -145,6 +149,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		// handle respawn
 		if (other.tag == "Book") {
+			addBook (other.name);
 //			numBooks++;
 //			numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 			BookScript.bookControl.updateBookTracker();
@@ -199,6 +204,9 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	public void addBook(string bName){
+		bookNames.Add (bName);
+	}
 
 
 
