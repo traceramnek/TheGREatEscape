@@ -8,6 +8,7 @@ public class PlayerPersistantData : IPersistence
     public float posX;
     public float posY;
     public float health;
+    public string[] booksCollected;
     public const string NameOfFile = "player.dat";
     public string FileName
     {

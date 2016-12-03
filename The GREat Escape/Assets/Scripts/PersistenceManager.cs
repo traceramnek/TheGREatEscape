@@ -31,9 +31,13 @@ public class PersistenceManager : MonoBehaviour {
             FileStream file = File.Open(Application.persistentDataPath + "/" + nameOfFile, FileMode.Open);
             serializedObject = formatter.Deserialize(file);
             file.Close();
-            File.Delete(Application.persistentDataPath + "/" + nameOfFile);
         }
         return serializedObject;
+    }
+
+    public void Delete(string nameOfFile)
+    {
+        File.Delete(Application.persistentDataPath + "/" + nameOfFile);
     }
 
 }
