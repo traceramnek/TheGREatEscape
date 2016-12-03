@@ -25,9 +25,10 @@ GameObject:
   - 61: {fileID: 61000011824700204}
   - 50: {fileID: 50000010663950492}
   - 114: {fileID: 114000012066617544}
+  - 114: {fileID: 114000012228940550}
   m_Layer: 0
   m_Name: SlimeEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +123,19 @@ MonoBehaviour:
   leftPoint: {fileID: 0}
   rightPoint: {fileID: 0}
   movingRight: 0
+--- !u!114 &114000012228940550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011495877106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7ed0cf745184cad8fddc8782b40483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!212 &212000013810634872
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -149,7 +163,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1824747055
+  m_SortingLayerID: -1397233251
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300450, guid: c89a1d7d0893a4f88974a79616eaafa9, type: 3}
   m_Color: {r: 0.28676468, g: 0.28393158, b: 0.18555361, a: 1}
