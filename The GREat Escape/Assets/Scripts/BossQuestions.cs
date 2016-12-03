@@ -17,7 +17,7 @@ public class BossQuestions : MonoBehaviour {
 		questionsAnswers = new SortedDictionary<string, string> ();
 		delim = ':';
 		delim2 = '.';
-		answerOptions = new string[NumOptions];
+		answerOptions = new List<string> ();
 	}
 	
 	// Update is called once per frame
