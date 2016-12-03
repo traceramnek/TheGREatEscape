@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class StompEnemy : MonoBehaviour {
 	// Use this for initialization
 	public Text wordDisplay;
-	public BossQuestions bossQ;
 
 	void Start () {
 	
@@ -22,7 +21,6 @@ public class StompEnemy : MonoBehaviour {
 		}
 
 		if (other.tag == "Boss") {
-			bossQ.parseStr ("Word: This is the definition");
 			wordDisplay.text = "Multiple Choice";
 			Time.timeScale = 0.0f;
 		}

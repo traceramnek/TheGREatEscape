@@ -18,13 +18,17 @@ public class BossQuestions : MonoBehaviour {
 		delim = ':';
 		delim2 = '.';
 		answerOptions = new List<string> ();
+
+		parseWords ();
+		setWordOptions ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-	public bool isInRevInd(int check){
+	//checks if index is in reviewIndicies
+	public bool isInRevInd(int check){ 
 		foreach (int i in BookScript.bookControl.reviewIndices) {
 			if(i == check) { 
 				return true;
@@ -32,7 +36,7 @@ public class BossQuestions : MonoBehaviour {
 		}
 		return false;
 	}
-
+	//sets All definitions that aren't what player already interacted with
 	public void setWordOptions(){
 		for (int i = 0; i < BookScript.bookControl.words.Length; i++) {
 			if (isInRevInd (i)) {
@@ -40,23 +44,25 @@ public class BossQuestions : MonoBehaviour {
 			}
 			parseStr (BookScript.bookControl.words [i]);
 			answerOptions.Add (defTmp);
+			print ("IN SETWORDOPTIONS" + defTmp);
 		}
 	}
-
+	// sets map with questions and answers
 	public void parseWords(){
 		foreach (string str in BookScript.bookControl.words) {
 			parseStr (str);
 			questionsAnswers [defTmp] = wrdTmp;
 		}
+		print ("IN PARSEWORDS" + defTmp);
 	}
-
+	//checks if player got question correct
 	public bool checkAnswer(string playerAnswer){
 		if (questionsAnswers [currQuestion].Equals (playerAnswer)) {
 			return true;
 		}
 		return false;
 	}
-
+	// breaks word,def string into separate word and definition
 	public void parseStr(string toParse){
 		int len = toParse.IndexOf (delim);
 		int len2 = toParse.IndexOf (delim2);
@@ -69,5 +75,12 @@ public class BossQuestions : MonoBehaviour {
 			print (defTmp);
 		}
 
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Player") {
+			parseWords ();
+			setWordOptions ();
+		}
 	}
 }

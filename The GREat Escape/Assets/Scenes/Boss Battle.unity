@@ -2205,6 +2205,7 @@ GameObject:
   - 50: {fileID: 1442720597}
   - 61: {fileID: 1442720598}
   - 114: {fileID: 1442720596}
+  - 114: {fileID: 1442720599}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -2319,6 +2320,23 @@ BoxCollider2D:
   m_Offset: {x: -0.02, y: -0.02}
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.57}
+--- !u!114 &1442720599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1442720592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb4953183c1749cd9f2a5e8cdd09cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delim: 0
+  delim2: 0
+  wrdTmp: 
+  defTmp: 
+  currQuestion: 
+  answerOptions: []
 --- !u!1 &1444245703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,6 +2368,8 @@ MonoBehaviour:
   delim2: 0
   wrdTmp: 
   defTmp: 
+  currQuestion: 
+  answerOptions: []
 --- !u!4 &1444245705
 Transform:
   m_ObjectHideFlags: 0
@@ -2773,7 +2793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordDisplay: {fileID: 1787177314}
-  bossQ: {fileID: 1444245704}
 --- !u!61 &1625991542
 BoxCollider2D:
   m_ObjectHideFlags: 0
