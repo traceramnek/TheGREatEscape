@@ -4799,6 +4799,7 @@ MonoBehaviour:
   isJumping: 0
   jumpSound: {fileID: 541609282}
   isPaused: 0
+  health: {fileID: 0}
 --- !u!95 &2112715277
 Animator:
   serializedVersion: 3

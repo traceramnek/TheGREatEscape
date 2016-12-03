@@ -38,11 +38,14 @@ public class PlayerController : MonoBehaviour {
 	public bool isJumping; // know if player is jumping
 
 	public AudioSource jumpSound; //sound of player jumping
-
+	public AudioSource hurtSound; 
 	public bool isPaused;
+
+	public HealthBar health;
 
 	// Use this for initialization
 	void Start () {
+		health = FindObjectOfType<HealthBar> ();
 		myRigidBody = GetComponent<Rigidbody2D> (); // rigid body for physics
 		myAnim = GetComponent<Animator> (); // animator for anim changes
 		//numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
@@ -171,6 +174,8 @@ public class PlayerController : MonoBehaviour {
 		//	gameObject.SetActive (false);
 
 			transform.position = respawnPosition;
+			health.changeBar (5);
+
 		}
 
 		if (other.tag == "Checkpoint") {
