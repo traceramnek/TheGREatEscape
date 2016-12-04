@@ -44,6 +44,7 @@ public class PersistenceSceneController : MonoBehaviour {
             foreach(string name in PlayerData.booksCollected)
             {
                 Destroy(GameObject.Find(name));
+                Player.GetComponent<PlayerController>().bookNames.Add(name);
             }
 
             PersistenceManager.Instance.Delete(PlayerPersistantData.NameOfFile);

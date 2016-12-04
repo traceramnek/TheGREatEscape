@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour {
 
 	public HealthBar health;
 
-	public List<string> bookNames;
+	public List<string> bookNames = new List<string> ();
 
 	// Use this for initialization
 	void Start () {
@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviour {
 		myAnim = GetComponent<Animator> (); // animator for anim changes
 		//numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 		isPaused = false;
-		bookNames = new List<string> ();
 	}
 
 	// Update is called once per frame
