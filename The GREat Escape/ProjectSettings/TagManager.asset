@@ -21,6 +21,7 @@ TagManager:
   - Checkpoint
   - BossJIT
   - Level2JIT
+  - Level1Obj
   layers:
   - Default
   - TransparentFX

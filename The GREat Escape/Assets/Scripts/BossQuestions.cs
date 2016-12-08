@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 
 public class BossQuestions : MonoBehaviour {
 
 	const int NumOptions = 13;
+	public Text Question, Ans1, Ans2, Ans3, Ans4;
+
 
 	public char delim, delim2;
 	public string wrdTmp, defTmp, currQuestion;
-	public SortedDictionary<string,string> questionsAnswers;
+	public SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
 	public List<string> answerOptions;
 
 	// Use this for initialization
@@ -20,8 +22,8 @@ public class BossQuestions : MonoBehaviour {
 	//	answerOptions = new List<string>[NumOptions];
 		answerOptions = new List<string> ();
 
-		parseWords ();
-		setWordOptions ();
+		parseCorrectWords ();
+		setWrongWordOptions ();
 	}
 	
 	// Update is called once per frame
@@ -38,18 +40,21 @@ public class BossQuestions : MonoBehaviour {
 		return false;
 	}
 	//sets All definitions that aren't what player already interacted with
-	public void setWordOptions(){
+	public void setWrongWordOptions(){
+		//go through all words
 		for (int i = 0; i < BookScript.bookControl.words.Length; i++) {
-			if (isInRevInd (i)) {
+			if (isInRevInd (i)) { // if in review, ignore it
 				continue; // go to next iteration
 			}
+
+			//only add words that weren't in review as non-correct answer options
 			parseStr (BookScript.bookControl.words [i]);
 			answerOptions.Add (defTmp);
 			print ("IN SETWORDOPTIONS" + defTmp);
 		}
 	}
 	// sets map with questions and answers
-	public void parseWords(){
+	public void parseCorrectWords(){
 		foreach (string str in BookScript.bookControl.words) {
 			parseStr (str);
 			questionsAnswers [defTmp] = wrdTmp;
@@ -78,10 +83,25 @@ public class BossQuestions : MonoBehaviour {
 
 	}
 
+
+	public void pickQuestion(){
+		//nothing yet
+	}
+
+	public bool isQuestionUsed(string word){ // check if question was already used
+		foreach (string str in questionsAnswers.Keys) {
+			if ( word == str ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
-			parseWords ();
-			setWordOptions ();
+			parseCorrectWords ();
+			setWrongWordOptions ();
 		}
 	}
 }
