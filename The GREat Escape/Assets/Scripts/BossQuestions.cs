@@ -8,7 +8,7 @@ public class BossQuestions : MonoBehaviour {
 	const int NumOptions = 13;
 	public Text Question, Ans1, Ans2, Ans3, Ans4;
 
-
+	public int numWords = BookScript.bookControl.words.Length;
 	public char delim, delim2;
 	public string wrdTmp, defTmp, currQuestion;
 	public SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
@@ -16,14 +16,14 @@ public class BossQuestions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		questionsAnswers = new SortedDictionary<string, string> ();
+		questionsAnswers = new SortedDictionary<string,string> ();
 		delim = ':';
 		delim2 = '.';
 	//	answerOptions = new List<string>[NumOptions];
 		answerOptions = new List<string> ();
 
-		parseCorrectWords ();
-		setWrongWordOptions ();
+		//parseCorrectWords ();
+		setWords ();
 	}
 	
 	// Update is called once per frame
@@ -40,10 +40,14 @@ public class BossQuestions : MonoBehaviour {
 		return false;
 	}
 	//sets All definitions that aren't what player already interacted with
-	public void setWrongWordOptions(){
+	public void setWords(){
 		//go through all words
-		for (int i = 0; i < BookScript.bookControl.words.Length; i++) {
+		for (int i = 0; i < numWords; i++) {
 			if (isInRevInd (i)) { // if in review, ignore it
+
+				//set review word in QA Map
+				parseStr (BookScript.bookControl.words [i]);
+				questionsAnswers [defTmp] = wrdTmp;
 				continue; // go to next iteration
 			}
 
@@ -86,6 +90,9 @@ public class BossQuestions : MonoBehaviour {
 
 	public void pickQuestion(){
 		//nothing yet
+		Random rand = new Random();
+		Question.text = "TEST";
+
 	}
 
 	public bool isQuestionUsed(string word){ // check if question was already used
@@ -100,8 +107,8 @@ public class BossQuestions : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
-			parseCorrectWords ();
-			setWrongWordOptions ();
+			//parseCorrectWords ();
+			setWords ();
 		}
 	}
 }
