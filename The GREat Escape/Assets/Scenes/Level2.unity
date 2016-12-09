@@ -705,8 +705,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: -249}
-  m_SizeDelta: {x: 454, y: 92}
+  m_AnchoredPosition: {x: -4, y: -309}
+  m_SizeDelta: {x: 402, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372865081
 MonoBehaviour:
@@ -1400,6 +1400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordDisplay: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1001 &627395695
 Prefab:
   m_ObjectHideFlags: 0
@@ -1487,8 +1488,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: -478}
-  m_SizeDelta: {x: 454, y: 92}
+  m_AnchoredPosition: {x: -4, y: -512}
+  m_SizeDelta: {x: 402, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726226586
 MonoBehaviour:
@@ -3390,8 +3391,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: -363}
-  m_SizeDelta: {x: 454, y: 92}
+  m_AnchoredPosition: {x: -4, y: -410}
+  m_SizeDelta: {x: 402, y: 81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913042675
 MonoBehaviour:
@@ -4132,6 +4133,7 @@ MonoBehaviour:
   hurtSound: {fileID: 454419709}
   isPaused: 0
   health: {fileID: 0}
+  bookNames: []
 --- !u!95 &2112715277
 Animator:
   serializedVersion: 3

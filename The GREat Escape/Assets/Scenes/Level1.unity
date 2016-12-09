@@ -839,8 +839,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: -249}
-  m_SizeDelta: {x: 454, y: 92}
+  m_AnchoredPosition: {x: -3, y: -309}
+  m_SizeDelta: {x: 372, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372865081
 MonoBehaviour:
@@ -1616,6 +1616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordDisplay: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!1001 &709850759
 Prefab:
   m_ObjectHideFlags: 0
@@ -1763,8 +1764,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: -478}
-  m_SizeDelta: {x: 454, y: 92}
+  m_AnchoredPosition: {x: -3, y: -496}
+  m_SizeDelta: {x: 372, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726226586
 MonoBehaviour:
@@ -4381,8 +4382,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2, y: -363}
-  m_SizeDelta: {x: 454, y: 92}
+  m_AnchoredPosition: {x: -3, y: -402}
+  m_SizeDelta: {x: 372, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913042675
 MonoBehaviour:
