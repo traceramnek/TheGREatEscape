@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour {
 
 	public List<string> bookNames = new List<string> ();
 
-	public Canvas questionCanvas;
 
 	// Use this for initialization
 	void Start () {
@@ -55,7 +54,6 @@ public class PlayerController : MonoBehaviour {
 		myAnim = GetComponent<Animator> (); // animator for anim changes
 		//numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 		isPaused = false;
-		questionCanvas.GetComponent<Canvas> ().enabled = false;
 	
 	}
 
