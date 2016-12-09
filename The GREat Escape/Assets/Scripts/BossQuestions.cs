@@ -6,7 +6,7 @@ using System.Linq;
 
 public class BossQuestions : MonoBehaviour {
 
-	const int NumOptions = 13;
+	//const int NumOptions = 13;
 	public Text Question, Ans1, Ans2, Ans3, Ans4;
 
 	public int numWords = BookScript.bookControl.words.Length;
@@ -95,7 +95,7 @@ public class BossQuestions : MonoBehaviour {
 		keyList = new List<string> (questionsAnswers.Keys);
 		//assign element at a random index from 0 to size of keyList to the string randomKey (will be our question)
 		string randomKey = keyList[Random.Range(0, keyList.Count-1)];
-		return questionsAnswers [randomKey];
+		return randomKey;
 
 	}
 
