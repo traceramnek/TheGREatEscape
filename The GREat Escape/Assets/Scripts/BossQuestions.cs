@@ -10,7 +10,7 @@ public class BossQuestions : MonoBehaviour {
 	const int NumChoices = 4;
 
 	//const int NumOptions = 13;
-	public Text Question, Ans1, Ans2, Ans3, Ans4;
+	public Text Question, Ans1, Ans2, Ans3;
 
 	public int numWords = BookScript.bookControl.words.Length;
 	public char delim, delim2;
@@ -74,13 +74,7 @@ public class BossQuestions : MonoBehaviour {
 		}
 		print ("IN PARSEWORDS" + defTmp);
 	}
-	//checks if player got question correct
-	public bool checkAnswer(string playerAnswer){
-		if (questionsAnswers [currQuestion].Equals (playerAnswer)) {
-			return true;
-		}
-		return false;
-	}
+
 	// breaks word,def string into separate word and definition
 	public void parseStr(string toParse){
 		int len = toParse.IndexOf (delim);
@@ -133,6 +127,13 @@ public class BossQuestions : MonoBehaviour {
 		return false;
 	}
 
+	//checks if player got question correct
+	public bool checkAnswer(string playerAnswer){
+		if (questionsAnswers [currQuestion].Equals (playerAnswer)) {
+			return true;
+		}
+		return false;
+	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
