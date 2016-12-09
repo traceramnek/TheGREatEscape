@@ -5,8 +5,10 @@ using UnityEngine.UI;
 public class StompEnemy : MonoBehaviour {
 	// Use this for initialization
 	public Text wordDisplay;
+	public BossQuestions boss;
 
 	void Start () {
+		boss = FindObjectOfType<BossQuestions> ();
 	
 	}
 	
@@ -21,7 +23,11 @@ public class StompEnemy : MonoBehaviour {
 		}
 
 		if (other.tag == "Boss") {
-			wordDisplay.text = "Multiple Choice";
+			boss.parseCorrectWords ();
+			print ("Entered Collider");
+			string ques = boss.pickQuestion ();
+			print ("pickQuestion");
+			wordDisplay.text = ques;
 			Time.timeScale = 0.0f;
 		}
 

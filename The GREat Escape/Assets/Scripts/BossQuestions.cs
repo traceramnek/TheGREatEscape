@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Linq;
 
 public class BossQuestions : MonoBehaviour {
 
@@ -13,7 +14,7 @@ public class BossQuestions : MonoBehaviour {
 	public string wrdTmp, defTmp, currQuestion;
 	public SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
 	public List<string> answerOptions;
-
+	public List<string> keyList;
 	// Use this for initialization
 	void Start () {
 		questionsAnswers = new SortedDictionary<string,string> ();
@@ -39,6 +40,7 @@ public class BossQuestions : MonoBehaviour {
 		}
 		return false;
 	}
+
 	//sets All definitions that aren't what player already interacted with
 	public void setWords(){
 		//go through all words
@@ -88,10 +90,12 @@ public class BossQuestions : MonoBehaviour {
 	}
 
 
-	public void pickQuestion(){
-		//nothing yet
-		Random rand = new Random();
-		Question.text = "TEST";
+	public string pickQuestion(){
+		//list of all keys in questionAnswers
+		keyList = new List<string> (questionsAnswers.Keys);
+		//assign element at a random index from 0 to size of keyList to the string randomKey (will be our question)
+		string randomKey = keyList[Random.Range(0, keyList.Count-1)];
+		return questionsAnswers [randomKey];
 
 	}
 
