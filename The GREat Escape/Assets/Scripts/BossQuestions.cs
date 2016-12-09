@@ -7,6 +7,8 @@ using System.Linq;
 public class BossQuestions : MonoBehaviour {
 
 	const int NumOptions = 13;
+	const int NumChoices = 4;
+
 	public Text Question, Ans1, Ans2, Ans3, Ans4;
 
 	public int numWords = BookScript.bookControl.words.Length;
@@ -15,6 +17,8 @@ public class BossQuestions : MonoBehaviour {
 	public SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
 	public List<string> answerOptions;
 	public List<string> keyList;
+	public string[] multiple_choice; //Array of multiple choice options
+
 	// Use this for initialization
 	void Start () {
 		questionsAnswers = new SortedDictionary<string,string> ();
@@ -25,6 +29,7 @@ public class BossQuestions : MonoBehaviour {
 
 		//parseCorrectWords ();
 		setWords ();
+		print ("set words called in start");
 	}
 	
 	// Update is called once per frame
@@ -46,7 +51,7 @@ public class BossQuestions : MonoBehaviour {
 		//go through all words
 		for (int i = 0; i < numWords; i++) {
 			if (isInRevInd (i)) { // if in review, ignore it
-
+				print("in set words for loop");
 				//set review word in QA Map
 				parseStr (BookScript.bookControl.words [i]);
 				questionsAnswers [defTmp] = wrdTmp;
@@ -54,6 +59,7 @@ public class BossQuestions : MonoBehaviour {
 			}
 
 			//only add words that weren't in review as non-correct answer options
+			print("outside of set words for loop");
 			parseStr (BookScript.bookControl.words [i]);
 			answerOptions.Add (defTmp);
 			print ("IN SETWORDOPTIONS" + defTmp);
@@ -85,6 +91,7 @@ public class BossQuestions : MonoBehaviour {
 			defTmp = toParse.Substring(len+1, (len2-len+1) ); // get def up to .
 			print(wrdTmp);
 			print (defTmp);
+			answerOptions.Add (defTmp);
 		}
 
 	}
@@ -95,9 +102,28 @@ public class BossQuestions : MonoBehaviour {
 		keyList = new List<string> (questionsAnswers.Keys);
 		//assign element at a random index from 0 to size of keyList to the string randomKey (will be our question)
 		string randomKey = keyList[Random.Range(0, keyList.Count-1)];
+		assignAnswers (randomKey);
 		return questionsAnswers [randomKey];
 
 	}
+
+	public void assignAnswers(string correct){
+		int correct_index = Random.Range (0, NumChoices-1);
+	
+		multiple_choice = new string[NumChoices];
+		multiple_choice [correct_index] = correct;
+
+		for (int i = 0; i <= NumChoices-1; i++) {
+			if (i != correct_index) {
+				print ("enter if");
+				multiple_choice [i] = answerOptions[Random.Range (0, answerOptions.Count - 1)];
+				print (" answerOptions assigned");
+			}
+			else
+				continue;
+		}
+	}
+
 
 	public bool isQuestionUsed(string word){ // check if question was already used
 		foreach (string str in questionsAnswers.Keys) {

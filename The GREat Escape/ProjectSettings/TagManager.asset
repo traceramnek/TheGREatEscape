@@ -22,6 +22,11 @@ TagManager:
   - BossJIT
   - Level2JIT
   - Level1Obj
+  - QuestionDisplay
+  - Choice1
+  - Choice2
+  - Choice3
+  - Choice4
   layers:
   - Default
   - TransparentFX

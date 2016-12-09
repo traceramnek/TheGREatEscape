@@ -53,9 +53,22 @@ public class GameButtons : MonoBehaviour {
 
 	public void ClearWordDisplay() {
 		GameObject.FindGameObjectWithTag ("WordDisplay").GetComponent<Text> ().text = "";
+
 		ResumeGame ();
 	}
 
+	public void ClearQuestionDisplay() {
+		GameObject.FindGameObjectWithTag ("QuestionDisplay").GetComponent<Text> ().text = "";
+		GameObject.FindGameObjectWithTag ("Choice1").SetActive (false);
+		GameObject.FindGameObjectWithTag ("Choice2").SetActive (false);
+		GameObject.FindGameObjectWithTag ("Choice3").SetActive (false);
+		GameObject.FindGameObjectWithTag ("Choice4").SetActive (false);
+
+
+
+		ResumeGame ();
+
+	}
 	public void Menu()
 	{
 		SceneManager.LoadScene ("Menu");
