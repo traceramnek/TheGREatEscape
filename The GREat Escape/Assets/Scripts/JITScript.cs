@@ -43,6 +43,7 @@ public class JITScript : MonoBehaviour {
 				Destroy (this.gameObject);
 				break;
 			case "Level2JIT":
+				BookScript.bookControl.ResetBooks ();
 				SceneManager.LoadScene("Level2");
 				break;
 			}
