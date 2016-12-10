@@ -71,18 +71,10 @@ public class BossQuestions : MonoBehaviour {
 			//only add words that weren't in review as non-correct answer options
 			print("outside of set words for loop");
 			parseStr (str);
-<<<<<<< HEAD
-			answerOptions.Add (defTmp);
+			answerOptions.Add (wrdTmp);
 			print ("IN PARSEWORDS " + defTmp);
 
 		}
-
-
-=======
-			questionsAnswers [defTmp] = wrdTmp;
-		}
-		print ("IN PARSEWORDS" + defTmp);
->>>>>>> origin/master
 	}
 
 	// breaks word,def string into separate word and definition
@@ -146,10 +138,7 @@ public class BossQuestions : MonoBehaviour {
 		}
 		return false;
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
 			parseCorrectWords ();

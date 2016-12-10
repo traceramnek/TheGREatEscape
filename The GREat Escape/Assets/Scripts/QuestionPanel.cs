@@ -10,7 +10,6 @@ public class QuestionPanel : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
 	public void enable () {
 		this.GetComponent<SpriteRenderer>().enabled = true;
 
