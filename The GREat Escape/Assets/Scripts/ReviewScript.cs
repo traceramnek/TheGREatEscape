@@ -8,12 +8,13 @@ public class ReviewScript : MonoBehaviour {
 	
 	const int NUM_REVIEW_WORDS = 4;
 	public static int reviewNum = 0;
+	public int canSetRev = 2; //used to mod
 	public Text revWord1, revWord2, revWord3, revWord4, reviewTitle;
 	//public Text [] reviewwords;
 
 	// Use this for initialization
 	void Start () {
-
+		//updateReviewNum ();
 		reviewTitle.text = "Word Review";
 
 //		switch (reviewNum) {
@@ -34,7 +35,7 @@ public class ReviewScript : MonoBehaviour {
 //			break;
 //		}
 
-
+		updateReviewNum ();
 		//setReviewWords ();
 	}
 
@@ -44,6 +45,8 @@ public class ReviewScript : MonoBehaviour {
 	}
 
 	public void setReviewWords(){
+		print ("In RevScr's setRevWrds: reviewNum = " +  reviewNum);
+		canSetRev++;
 		switch (reviewNum) {
 		case 1:	
 			revWord1.text = BookScript.bookControl.reviewWords [0];
@@ -66,7 +69,10 @@ public class ReviewScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (SceneManager.GetActiveScene ().name == "Review1") {
-			setReviewWords ();
+			print ("In RevScr's Update!");
+			if (canSetRev %2 == 0) {
+				setReviewWords ();
+			}
 		}
 
 	}

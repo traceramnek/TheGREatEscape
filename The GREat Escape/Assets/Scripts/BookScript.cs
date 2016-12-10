@@ -112,6 +112,7 @@ public class BookScript : MonoBehaviour {
 		foreach (int i in reviewIndices) {
 			reviewWords.Add (words [i]); // add only the words that were picked;
 		}
+		//ReviewScript.updateReviewNum();
 	}
 	public List<string> getReviewWords(){
 		return reviewWords;
