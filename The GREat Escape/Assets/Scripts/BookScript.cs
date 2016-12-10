@@ -93,6 +93,7 @@ public class BookScript : MonoBehaviour {
 	public void ResetBooks(){
 		numBooks = 0;
 		reviewWords.Clear ();
+		//reviewIndices.Clear ();
 			
 		
 	}

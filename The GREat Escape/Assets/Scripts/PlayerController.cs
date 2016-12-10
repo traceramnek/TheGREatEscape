@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour {
 		if (other.tag == "Door") {
 			if (BookScript.bookControl.numBooksCheck()) {
 //				if (Input.GetKeyDown(KeyCode.UpArrow)) {
+					ReviewScript.updateReviewNum();
 					BookScript.bookControl.setReviewWords ();
 					SceneManager.LoadScene ("Review1");
 //				}
