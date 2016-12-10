@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class StompEnemy : MonoBehaviour {
 	// Use this for initialization
@@ -10,46 +11,63 @@ public class StompEnemy : MonoBehaviour {
 	public Button choice2;
 	public Button choice3;
 	public Button choice4;
-	public Canvas questionCanvas;
+	public QuestionCanvas qCanvas;
+	public QuestionPanel panel;
 
 	void Start () {
 		boss = FindObjectOfType<BossQuestions> ();
-	
+		qCanvas = FindObjectOfType<QuestionCanvas> ();
+		panel = FindObjectOfType<QuestionPanel> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 	}
-	void EnableButtons(){
-		
-		GameObject.FindGameObjectWithTag ("Choice1").SetActive (true);
-		GameObject.FindGameObjectWithTag ("Choice2").SetActive (true);
-		GameObject.FindGameObjectWithTag ("Choice3").SetActive (true);
-		GameObject.FindGameObjectWithTag ("Choice4").SetActive (true);
+
+	void MC(){
+		//assign word choices to button texts
+		choice1.GetComponentInChildren<Text>().text = boss.multiple_choice [0];
+		choice2.GetComponentInChildren<Text>().text = boss.multiple_choice [1];
+		choice3.GetComponentInChildren<Text>().text = boss.multiple_choice [2];
+		choice4.GetComponentInChildren<Text>().text = boss.multiple_choice [3];
 
 	}
 
+/*	void answerQuestion(){
+		int answer = boss.correct_index;
+
+		if (EventSystem.current.currentSelectedGameObject.name == "Choice1") {
+			if(answer!=1)
+				
+		}
+		if (EventSystem.current.currentSelectedGameObject.name == "Choice2") {
+		}
+		if (EventSystem.current.currentSelectedGameObject.name == "Choice3") {
+		}
+		if (EventSystem.current.currentSelectedGameObject.name == "Choice4") {
+		}
+			
+
+	}
+	*/
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Enemy") {
 			Destroy (other.gameObject);
 		}
 
 		if (other.tag == "Boss") {
-			questionCanvas.GetComponent<Canvas> ().enabled = true;
-
-			boss.parseCorrectWords ();
+			qCanvas.enableQuestionCanvas ();
+			panel.enable ();
 			print ("Entered Collider");
 			string ques = boss.pickQuestion ();
 			print ("pickQuestion");
+			print ("ques is");
+			print (ques);
 			questionDisplay.text = ques;
-			EnableButtons ();
-		//	choice1.guiText = boss.multiple_choice [0];
-		//	choice2.guiText = boss.multiple_choice [1];
-		//	choice3.guiText = boss.multiple_choice [2];
-		//	choice4.guiText = boss.multiple_choice [3];
-
+			MC ();
 			Time.timeScale = 0.0f;
+
 		}
 
 	}

@@ -8,10 +8,13 @@ public class GameButtons : MonoBehaviour {
 	public GameObject[] showIfPaused;
 	public GameObject[] showIfResumed;
 
+	public QuestionCanvas qCanvas;
+
 
 	// Use this for initialization
 	void Start () {
-		
+		qCanvas = FindObjectOfType<QuestionCanvas> ();
+
 
 		//populate array with relevant objects to show when game is paused
 		showIfPaused = GameObject.FindGameObjectsWithTag("WhenPaused");
@@ -58,14 +61,7 @@ public class GameButtons : MonoBehaviour {
 	}
 
 	public void ClearQuestionDisplay() {
-		GameObject.FindGameObjectWithTag ("QuestionDisplay").GetComponent<Text> ().text = "";
-		GameObject.FindGameObjectWithTag ("Choice1").SetActive (false);
-		GameObject.FindGameObjectWithTag ("Choice2").SetActive (false);
-		GameObject.FindGameObjectWithTag ("Choice3").SetActive (false);
-		GameObject.FindGameObjectWithTag ("Choice4").SetActive (false);
-
-
-
+		qCanvas.disableQuestionCanvas ();
 		ResumeGame ();
 
 	}
