@@ -10,7 +10,7 @@ public class BossQuestions : MonoBehaviour {
 	const int NumChoices = 4;
 
 	//const int NumOptions = 13;
-	public Text Question, Ans1, Ans2, Ans3, Ans4;
+	public Text Question, Ans1, Ans2, Ans3;
 
 	public int numWords = BookScript.bookControl.words.Length;
 	public char delim, delim2;
@@ -71,12 +71,18 @@ public class BossQuestions : MonoBehaviour {
 			//only add words that weren't in review as non-correct answer options
 			print("outside of set words for loop");
 			parseStr (str);
+<<<<<<< HEAD
 			answerOptions.Add (defTmp);
 			print ("IN PARSEWORDS " + defTmp);
 
 		}
 
 
+=======
+			questionsAnswers [defTmp] = wrdTmp;
+		}
+		print ("IN PARSEWORDS" + defTmp);
+>>>>>>> origin/master
 	}
 
 	// breaks word,def string into separate word and definition
@@ -140,6 +146,10 @@ public class BossQuestions : MonoBehaviour {
 		}
 		return false;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
 			parseCorrectWords ();
