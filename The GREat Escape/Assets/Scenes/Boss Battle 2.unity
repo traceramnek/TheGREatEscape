@@ -2741,8 +2741,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1873398d0be42bb9affb0261e18087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordDisplay: {fileID: 1206629302}
+  questionDisplay: {fileID: 0}
   boss: {fileID: 0}
+  choice1: {fileID: 0}
+  choice2: {fileID: 0}
+  choice3: {fileID: 0}
+  choice4: {fileID: 0}
+  qCanvas: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1 &908184157
 GameObject:
   m_ObjectHideFlags: 0
@@ -3256,6 +3262,77 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35a8f75bf9b3447eeb09a42b50f3b6d5, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1081468780
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 99.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_RootOrder
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010024534820, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: wordDisplay
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012081085212, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_TagString
+      value: Level2JIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012081085212, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_Name
+      value: InvisCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012546462178, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012546462178, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.5300722
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000012546462178, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 12.414824
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000010024534820, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1083351239
 Prefab:
@@ -5054,7 +5131,6 @@ MonoBehaviour:
   Ans1: {fileID: 0}
   Ans2: {fileID: 0}
   Ans3: {fileID: 0}
-  Ans4: {fileID: 0}
   numWords: 0
   delim: 0
   delim2: 0
@@ -5063,6 +5139,8 @@ MonoBehaviour:
   currQuestion: 
   answerOptions: []
   keyList: []
+  multiple_choice: []
+  correct_index: 0
 --- !u!4 &1686918072
 Transform:
   m_ObjectHideFlags: 0
@@ -5182,6 +5260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showIfPaused: []
   showIfResumed: []
+  qCanvas: {fileID: 0}
 --- !u!114 &1801066151
 MonoBehaviour:
   m_ObjectHideFlags: 0
