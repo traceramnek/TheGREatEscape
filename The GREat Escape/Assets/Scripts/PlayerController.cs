@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour {
 
 	public AudioSource jumpSound; //sound of player jumping
 	public AudioSource hurtSound; 
+	public AudioSource rightSound;
+	public AudioSource wrongSound;
 	public bool isPaused;
 
 	public HealthBar health;

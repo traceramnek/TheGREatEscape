@@ -15,7 +15,6 @@ public class GameButtons : MonoBehaviour {
 	void Start () {
 		qCanvas = FindObjectOfType<QuestionCanvas> ();
 
-
 		//populate array with relevant objects to show when game is paused
 		showIfPaused = GameObject.FindGameObjectsWithTag("WhenPaused");
 		foreach (GameObject psed in showIfPaused)

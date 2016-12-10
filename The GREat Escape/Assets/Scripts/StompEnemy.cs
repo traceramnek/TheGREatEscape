@@ -13,11 +13,16 @@ public class StompEnemy : MonoBehaviour {
 	public Button choice4;
 	public QuestionCanvas qCanvas;
 	public QuestionPanel panel;
+	public HealthBar Health;
+	public PlayerController player;
 
 	void Start () {
 		boss = FindObjectOfType<BossQuestions> ();
 		qCanvas = FindObjectOfType<QuestionCanvas> ();
 		panel = FindObjectOfType<QuestionPanel> ();
+		Health = FindObjectOfType<HealthBar> ();
+		player = FindObjectOfType<PlayerController> ();
+
 	}
 	
 	// Update is called once per frame
@@ -34,23 +39,42 @@ public class StompEnemy : MonoBehaviour {
 
 	}
 
-/*	void answerQuestion(){
+	void answerQuestion(){
 		int answer = boss.correct_index;
 
 		if (EventSystem.current.currentSelectedGameObject.name == "Choice1") {
-			if(answer!=1)
-				
+			if (answer != 0) {
+				Health.changeBar (10);	
+				player.wrongSound.Play ();
+			} else
+				player.rightSound.Play ();
 		}
 		if (EventSystem.current.currentSelectedGameObject.name == "Choice2") {
+			if (answer != 1) {
+				Health.changeBar (10);	
+				player.wrongSound.Play ();
+			} else
+				player.rightSound.Play ();
 		}
 		if (EventSystem.current.currentSelectedGameObject.name == "Choice3") {
+			
+			if (answer != 2) {
+				Health.changeBar (10);	
+				player.wrongSound.Play ();
+			} else
+				player.rightSound.Play ();
 		}
 		if (EventSystem.current.currentSelectedGameObject.name == "Choice4") {
+			if (answer != 3) {
+				Health.changeBar (10);	
+				player.wrongSound.Play ();
+			} else
+				player.rightSound.Play ();
 		}
 			
 
 	}
-	*/
+
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Enemy") {
 			Destroy (other.gameObject);
