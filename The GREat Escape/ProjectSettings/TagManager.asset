@@ -29,6 +29,7 @@ TagManager:
   - Choice4
   - Door2
   - Door3
+  - Controls
   layers:
   - Default
   - TransparentFX

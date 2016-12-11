@@ -1623,6 +1623,7 @@ MonoBehaviour:
   choice4: {fileID: 0}
   qCanvas: {fileID: 0}
   panel: {fileID: 0}
+  answer: 0
 --- !u!1001 &709850759
 Prefab:
   m_ObjectHideFlags: 0
@@ -2615,6 +2616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759520fdd5b3d4de9ba0f63824ee821f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSetRev: 2
   revWord1: {fileID: 0}
   revWord2: {fileID: 0}
   revWord3: {fileID: 0}
@@ -3256,6 +3258,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2112715281}
   m_RootOrder: 0
+--- !u!1001 &1403457662
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013820785804, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_RootOrder
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012081085212, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_Name
+      value: JITCollider (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012081085212, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+      propertyPath: m_TagString
+      value: Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010024534820, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: wordDisplay
+      value: 
+      objectReference: {fileID: 116111315}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1429950352
 Prefab:
   m_ObjectHideFlags: 0
@@ -4256,6 +4313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showIfPaused: []
   showIfResumed: []
+  panel: {fileID: 0}
   qCanvas: {fileID: 0}
 --- !u!114 &1850672418
 MonoBehaviour:
@@ -5234,6 +5292,8 @@ MonoBehaviour:
   isJumping: 0
   jumpSound: {fileID: 541609282}
   hurtSound: {fileID: 1724492923}
+  rightSound: {fileID: 0}
+  wrongSound: {fileID: 0}
   isPaused: 0
   health: {fileID: 0}
   bookNames: []
