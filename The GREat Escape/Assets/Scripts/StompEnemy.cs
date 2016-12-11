@@ -83,9 +83,11 @@ public class StompEnemy : MonoBehaviour {
 		if (other.tag == "Boss") {
 			qCanvas.enableQuestionCanvas ();
 			panel.enable ();
+
 			string ques = boss.pickQuestion ();
 			questionDisplay.text = ques;
 			MC ();
+
 			Time.timeScale = 0.0f;
 
 		}

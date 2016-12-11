@@ -84,6 +84,7 @@
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/BookScript.cs'
 'Assets/Scripts/BossController.cs'
+'Assets/Scripts/BossHealthBar.cs'
 'Assets/Scripts/BossQuestions.cs'
 'Assets/Scripts/ButtonPushed.cs'
 'Assets/Scripts/CameraController.cs'

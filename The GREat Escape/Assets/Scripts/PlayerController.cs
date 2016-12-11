@@ -145,27 +145,33 @@ public class PlayerController : MonoBehaviour {
 			Time.timeScale = 0.0f;
 		}
 		if (other.tag == "Door") {
-			if (BookScript.bookControl.numBooksCheck()) {
+			if (BookScript.bookControl.numBooksCheck ()) {
 //				if (Input.GetKeyDown(KeyCode.UpArrow)) {
-					//ReviewScript.updateReviewNum();
-					//ReviewScript.reviewNum++;
-					BookScript.bookControl.setReviewWords ();
-					SceneManager.LoadScene ("Review1");
+				//ReviewScript.updateReviewNum();
+				//ReviewScript.reviewNum++;
+				BookScript.bookControl.setReviewWords ();
+				SceneManager.LoadScene ("Review1");
 //				}
 			}
+		}
+
+			if (other.tag == "Door2") {
+				if (BossHealthBar.current == 0) {
+					SceneManager.LoadScene ("Level2");
+				}
 		
-		}
-		if (other.tag == "KillPlane") {
-		//	gameObject.SetActive (false);
+			}
+			if (other.tag == "KillPlane") {
+				//	gameObject.SetActive (false);
 
-			transform.position = respawnPosition;
-			health.changeBar (5);
+				transform.position = respawnPosition;
+				health.changeBar (10);
 
-		}
+			}
 
-		if (other.tag == "Checkpoint") {
-			respawnPosition = other.transform.position;
-		}
+			if (other.tag == "Checkpoint") {
+				respawnPosition = other.transform.position;
+			}
 
 	}
 

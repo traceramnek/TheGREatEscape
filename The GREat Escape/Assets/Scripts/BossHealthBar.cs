@@ -3,21 +3,19 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public class BossHealthBar : MonoBehaviour {
 
-public class HealthBar : MonoBehaviour {
-	
+
 	public float fillAmount=1;
 	public Image content;
-    public Text NameText;
-	public float current;
+	public static float current;
 
 	// Use this for initialization
 	void Start () {
-		current = 50;
-		content.fillAmount = Map (current, 0, 50, 0, 1);
-        NameText.text = PlayerPrefs.GetString("CurrentPlayer");
+		current = 30;
+		content.fillAmount = Map (current, 0, 30, 0, 1);
 	}
-	
+
 	// Update is called once per frame
 	public void Update () {
 
@@ -30,15 +28,12 @@ public class HealthBar : MonoBehaviour {
 
 	public void changeBar(int change){
 		current = current - change;
-		content.fillAmount = Map (current, 0, 50, 0, 1);
+		content.fillAmount = Map (current, 0, 30, 0, 1);
 
-		if (current == 0)
-		SceneManager.LoadScene ("Gameover");
-		
-		//BookScript.bookControl.ResetBooks ();
-	//	BookScript.bookControl.reviewIndices.Clear ();
+		if (current == 0) {
+			Destroy (GameObject.FindGameObjectWithTag ("Boss"));
 
-		
+		}
+			
 	}
-		
 }

@@ -19,7 +19,7 @@ public class BossQuestions : MonoBehaviour {
 	public List<string> answerOptions;
 	public List<string> keyList;
 	public string[] multiple_choice; //Array of multiple choice options
-	public int correct_index;
+	public static int correct_index;
 	// Use this for initialization
 	void Start () {
 		questionsAnswers = new SortedDictionary<string,string> ();

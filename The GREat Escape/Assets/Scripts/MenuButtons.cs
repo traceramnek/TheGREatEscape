@@ -67,4 +67,10 @@ public class MenuButtons : MonoBehaviour {
 		//BookScript.bookControl.ResetBooks ();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // go to next level in game
 	}
+
+	public void TryAgain(){
+		BookScript.bookControl.ResetBooks ();
+		BookScript.bookControl.reviewIndices.Clear ();
+		SceneManager.LoadScene ("EnterName");
+	}
 }
