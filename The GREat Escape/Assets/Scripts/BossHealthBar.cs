@@ -31,6 +31,7 @@ public class BossHealthBar : MonoBehaviour {
 		content.fillAmount = Map (current, 0, 30, 0, 1);
 
 		if (current == 0) {
+			BookScript.bookControl.ResetBooks();
 			Destroy (GameObject.FindGameObjectWithTag ("Boss"));
 
 		}

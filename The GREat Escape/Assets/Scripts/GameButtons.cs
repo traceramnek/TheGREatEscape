@@ -66,6 +66,11 @@ public class GameButtons : MonoBehaviour {
 	}
 
 	public void ClearQuestionDisplay() {
+		GameObject.FindGameObjectWithTag ("Choice1").SetActive (false);
+		GameObject.FindGameObjectWithTag ("Choice2").SetActive (false);
+		GameObject.FindGameObjectWithTag ("Choice3").SetActive (false);
+		GameObject.FindGameObjectWithTag ("Choice4").SetActive (false);
+
 		qCanvas.disableQuestionCanvas ();
 		panel.disable ();
 		ResumeGame ();

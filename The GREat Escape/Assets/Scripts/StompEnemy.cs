@@ -14,11 +14,20 @@ public class StompEnemy : MonoBehaviour {
 	public QuestionCanvas qCanvas;
 	public QuestionPanel panel;
 	public int answer;
+	GameObject button1;
+	GameObject button2;
+	GameObject button3;
+	GameObject button4;
 
 	void Start () {
 		boss = FindObjectOfType<BossQuestions> ();
 		qCanvas = FindObjectOfType<QuestionCanvas> ();
 		panel = FindObjectOfType<QuestionPanel> ();
+		button1 = GameObject.FindGameObjectWithTag ("Choice1");
+		button2 = GameObject.FindGameObjectWithTag ("Choice2");
+		button3 = GameObject.FindGameObjectWithTag ("Choice3");
+		button4 = GameObject.FindGameObjectWithTag ("Choice4");
+
 
 
 	}
@@ -37,43 +46,6 @@ public class StompEnemy : MonoBehaviour {
 
 	}
 
-	/*void answerQuestion(int answer){
-		
-		print ("inside answer question");
-		if (EventSystem.current.currentSelectedGameObject.name == "Choice1") {
-			if (answer != 0) {
-				Health.changeBar (10);	
-				player.wrongSound.Play ();
-			} else
-				player.rightSound.Play ();
-		}
-		if (EventSystem.current.currentSelectedGameObject.name == "Choice2") {
-			if (answer != 1) {
-				Health.changeBar (10);	
-				player.wrongSound.Play ();
-			} else
-				player.rightSound.Play ();
-		}
-		if (EventSystem.current.currentSelectedGameObject.name == "Choice3") {
-			
-			if (answer != 2) {
-				Health.changeBar (10);	
-				player.wrongSound.Play ();
-			} else
-				player.rightSound.Play ();
-		}
-		if (EventSystem.current.currentSelectedGameObject.name == "Choice4") {
-			if (answer != 3) {
-				Health.changeBar (10);	
-				player.wrongSound.Play ();
-			} else
-				player.rightSound.Play ();
-		}
-			
-
-	}
-
-*/
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Enemy") {
@@ -84,11 +56,18 @@ public class StompEnemy : MonoBehaviour {
 			qCanvas.enableQuestionCanvas ();
 			panel.enable ();
 
+			button1.SetActive (true);
+			button2.SetActive (true);
+			button3.SetActive (true);
+			button4.SetActive (true);
+
+			Time.timeScale = 0.0f;
+
 			string ques = boss.pickQuestion ();
 			questionDisplay.text = ques;
 			MC ();
 
-			Time.timeScale = 0.0f;
+
 
 		}
 
