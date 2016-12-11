@@ -32,7 +32,8 @@ public class ButtonPushed : MonoBehaviour {
 		if (chosen == correct_answer) {
 			player.rightSound.Play ();
 			bossHealth.changeBar (10);
-
+			BossQuestions.questionsUsed.Add (StompEnemy.ques);
+	
 		} 
 		if (chosen != correct_answer)
 		{

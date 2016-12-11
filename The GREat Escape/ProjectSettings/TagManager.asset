@@ -30,6 +30,7 @@ TagManager:
   - Door2
   - Door3
   - Controls
+  - Door4
   layers:
   - Default
   - TransparentFX

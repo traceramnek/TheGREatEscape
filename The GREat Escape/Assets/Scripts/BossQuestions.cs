@@ -20,6 +20,7 @@ public class BossQuestions : MonoBehaviour {
 	public List<string> keyList;
 	public string[] multiple_choice; //Array of multiple choice options
 	public static int correct_index;
+	public static List<string> questionsUsed;
 	// Use this for initialization
 	void Start () {
 		questionsAnswers = new SortedDictionary<string,string> ();
@@ -27,6 +28,7 @@ public class BossQuestions : MonoBehaviour {
 		delim2 = '.';
 	//	answerOptions = new List<string>[NumOptions];
 		answerOptions = new List<string> ();
+		questionsUsed = new List<string> ();
 		parseCorrectWords ();
 	}
 	
@@ -54,6 +56,13 @@ public class BossQuestions : MonoBehaviour {
 		return false;
 	}
 
+	public bool isQuesUsed(string check){
+		foreach (string i in questionsUsed) {
+			if (i == check)
+				return true;
+		}
+		return false;
+	}
 
 	// sets map with questions and answers
 	public void parseCorrectWords(){
@@ -94,9 +103,13 @@ public class BossQuestions : MonoBehaviour {
 	public string pickQuestion(){
 		//list of all keys in questionAnswers
 		keyList = new List<string> (questionsAnswers.Keys);
+
 		//assign element at a random index from 0 to size of keyList to the string randomKey (will be our question)
 		string randomKey = keyList[Random.Range(0, keyList.Count-1)];
-	//	currQuestion = randomKey;
+
+		while (isQuesUsed (randomKey)) {
+		  randomKey = keyList[Random.Range(0, keyList.Count-1)];
+		}
 		assignAnswers (questionsAnswers [randomKey]);
 		return randomKey;
 

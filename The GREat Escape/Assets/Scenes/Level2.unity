@@ -1399,8 +1399,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1873398d0be42bb9affb0261e18087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordDisplay: {fileID: 0}
+  questionDisplay: {fileID: 0}
   boss: {fileID: 0}
+  choice1: {fileID: 0}
+  choice2: {fileID: 0}
+  choice3: {fileID: 0}
+  choice4: {fileID: 0}
+  qCanvas: {fileID: 0}
+  panel: {fileID: 0}
+  answer: 0
 --- !u!1001 &627395695
 Prefab:
   m_ObjectHideFlags: 0
@@ -3266,6 +3273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showIfPaused: []
   showIfResumed: []
+  panel: {fileID: 0}
+  qCanvas: {fileID: 0}
 --- !u!114 &1850672418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,6 +3545,10 @@ Prefab:
     - target: {fileID: 4000011802778192, guid: 2aafa045c66d3483fb4cfde64c9b53c9, type: 2}
       propertyPath: m_RootOrder
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014274464732, guid: 2aafa045c66d3483fb4cfde64c9b53c9, type: 2}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aafa045c66d3483fb4cfde64c9b53c9, type: 2}
@@ -4131,6 +4144,8 @@ MonoBehaviour:
   isJumping: 0
   jumpSound: {fileID: 541609282}
   hurtSound: {fileID: 454419709}
+  rightSound: {fileID: 0}
+  wrongSound: {fileID: 0}
   isPaused: 0
   health: {fileID: 0}
   bookNames: []

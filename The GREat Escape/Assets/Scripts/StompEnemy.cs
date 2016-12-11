@@ -18,6 +18,7 @@ public class StompEnemy : MonoBehaviour {
 	GameObject button2;
 	GameObject button3;
 	GameObject button4;
+	public static string ques;
 
 	void Start () {
 		boss = FindObjectOfType<BossQuestions> ();
@@ -63,7 +64,7 @@ public class StompEnemy : MonoBehaviour {
 
 			Time.timeScale = 0.0f;
 
-			string ques = boss.pickQuestion ();
+			ques = boss.pickQuestion ();
 			questionDisplay.text = ques;
 			MC ();
 
