@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759520fdd5b3d4de9ba0f63824ee821f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSetRev: 2
   revWord1: {fileID: 127003659}
   revWord2: {fileID: 2005893699}
   revWord3: {fileID: 1206758568}
@@ -1065,7 +1066,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 545424655}
-        m_MethodName: GoToBoss
+        m_MethodName: PickBossToGoTo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1089,7 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47794116, g: 0.47794116, b: 0.47794116, a: 1}
+  m_Color: {r: 0.71323526, g: 0.7027465, b: 0.7027465, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour {
 
+	public static int currLevel = 1;
+
 	public void PlayGame()
 	{
 		SceneManager.LoadScene ("EnterName");
@@ -14,6 +16,15 @@ public class MenuButtons : MonoBehaviour {
         
         SceneManager.LoadScene("Level1");
     }
+
+	public void PickBossToGoTo(){
+		if (currLevel == 1) {
+			GoToBoss ();
+			currLevel++;
+		} else if (currLevel == 2) {
+			GoToBoss2 ();
+		}
+	}
 
 	public void GoToBoss(){
 		SceneManager.LoadScene ("Boss Battle");
@@ -64,7 +75,6 @@ public class MenuButtons : MonoBehaviour {
 	}
 
 	public void GoToNextLevel(){
-		//BookScript.bookControl.ResetBooks ();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // go to next level in game
 	}
 
