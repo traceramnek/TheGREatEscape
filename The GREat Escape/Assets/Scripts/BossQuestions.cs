@@ -111,7 +111,11 @@ public class BossQuestions : MonoBehaviour {
 
 		for (int i = 0; i <= NumChoices-1; i++) {
 			if (i != correct_index) {
-				multiple_choice [i] = answerOptions[Random.Range (0, answerOptions.Count - 1)];
+				int rand = Random.Range (0, answerOptions.Count - 1);
+				if (answerOptions [rand] != correct)
+					multiple_choice [i] = answerOptions [rand];
+				else
+					i++;
 			}
 			else
 				continue;
