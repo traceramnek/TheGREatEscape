@@ -161,6 +161,11 @@ public class PlayerController : MonoBehaviour {
 				}
 		
 			}
+
+		if (other.tag == "Door3") {
+			if (BossHealthBar.current == 0)
+				SceneManager.LoadScene ("Win");
+		}
 			if (other.tag == "KillPlane") {
 				//	gameObject.SetActive (false);
 
