@@ -101,8 +101,9 @@ GameObject:
   - 222: {fileID: 5561800}
   - 114: {fileID: 5561799}
   - 114: {fileID: 5561798}
+  - 114: {fileID: 5561801}
   m_Layer: 5
-  m_Name: Choice4
+  m_Name: 3
   m_TagString: Choice4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +166,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5561799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5561801}
+        m_MethodName: Pushed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &5561799
@@ -201,6 +213,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5561796}
+--- !u!114 &5561801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 5561796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247a64f16c51a4d569d1898249e68c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  chosen: 0
+  bq: {fileID: 0}
+  correct_answer: 0
+  Health: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &36055467
 Prefab:
   m_ObjectHideFlags: 0
@@ -1071,8 +1100,9 @@ GameObject:
   - 222: {fileID: 228840085}
   - 114: {fileID: 228840084}
   - 114: {fileID: 228840083}
+  - 114: {fileID: 228840086}
   m_Layer: 5
-  m_Name: Choice2
+  m_Name: 1
   m_TagString: Choice2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1135,7 +1165,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 228840084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228840086}
+        m_MethodName: Pushed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &228840084
@@ -1171,6 +1212,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 228840081}
+--- !u!114 &228840086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 228840081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247a64f16c51a4d569d1898249e68c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  chosen: 0
+  bq: {fileID: 0}
+  correct_answer: 0
+  Health: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &243449829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1675,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 128
+  Priority: 56
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2422,8 +2480,9 @@ GameObject:
   - 222: {fileID: 668007973}
   - 114: {fileID: 668007972}
   - 114: {fileID: 668007971}
+  - 114: {fileID: 668007974}
   m_Layer: 5
-  m_Name: Choice3
+  m_Name: 2
   m_TagString: Choice3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2486,7 +2545,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 668007972}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 668007974}
+        m_MethodName: Pushed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &668007972
@@ -2522,6 +2592,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 668007969}
+--- !u!114 &668007974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668007969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247a64f16c51a4d569d1898249e68c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  chosen: 0
+  bq: {fileID: 0}
+  correct_answer: 0
+  Health: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &673375853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,8 +3785,9 @@ GameObject:
   - 222: {fileID: 1227350653}
   - 114: {fileID: 1227350652}
   - 114: {fileID: 1227350651}
+  - 114: {fileID: 1227350654}
   m_Layer: 5
-  m_Name: Choice1
+  m_Name: 0
   m_TagString: Choice1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3762,7 +3850,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1227350652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1227350654}
+        m_MethodName: Pushed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1227350652
@@ -3798,6 +3897,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1227350649}
+--- !u!114 &1227350654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1227350649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247a64f16c51a4d569d1898249e68c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  chosen: 0
+  bq: {fileID: 0}
+  correct_answer: 0
+  Health: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1230814441
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,6 +5250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showIfPaused: []
   showIfResumed: []
+  panel: {fileID: 0}
   qCanvas: {fileID: 0}
 --- !u!114 &1616645687
 MonoBehaviour:
@@ -5195,8 +5312,7 @@ MonoBehaviour:
   choice4: {fileID: 5561798}
   qCanvas: {fileID: 1368145745}
   panel: {fileID: 0}
-  Health: {fileID: 0}
-  player: {fileID: 0}
+  answer: 0
 --- !u!61 &1625991542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5348,7 +5464,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 128
+  Priority: 60
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

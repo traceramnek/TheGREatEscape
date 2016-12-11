@@ -13,15 +13,13 @@ public class StompEnemy : MonoBehaviour {
 	public Button choice4;
 	public QuestionCanvas qCanvas;
 	public QuestionPanel panel;
-	public HealthBar Health;
-	public PlayerController player;
+	public int answer;
 
 	void Start () {
 		boss = FindObjectOfType<BossQuestions> ();
 		qCanvas = FindObjectOfType<QuestionCanvas> ();
 		panel = FindObjectOfType<QuestionPanel> ();
-		Health = FindObjectOfType<HealthBar> ();
-		player = FindObjectOfType<PlayerController> ();
+
 
 	}
 	
@@ -39,9 +37,9 @@ public class StompEnemy : MonoBehaviour {
 
 	}
 
-	void answerQuestion(){
-		int answer = boss.correct_index;
-
+	/*void answerQuestion(int answer){
+		
+		print ("inside answer question");
 		if (EventSystem.current.currentSelectedGameObject.name == "Choice1") {
 			if (answer != 0) {
 				Health.changeBar (10);	
@@ -75,6 +73,8 @@ public class StompEnemy : MonoBehaviour {
 
 	}
 
+*/
+
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Enemy") {
 			Destroy (other.gameObject);
@@ -83,11 +83,7 @@ public class StompEnemy : MonoBehaviour {
 		if (other.tag == "Boss") {
 			qCanvas.enableQuestionCanvas ();
 			panel.enable ();
-			print ("Entered Collider");
 			string ques = boss.pickQuestion ();
-			print ("pickQuestion");
-			print ("ques is");
-			print (ques);
 			questionDisplay.text = ques;
 			MC ();
 			Time.timeScale = 0.0f;

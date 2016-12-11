@@ -92,22 +92,19 @@ public class BossQuestions : MonoBehaviour {
 
 	}
 	public string pickQuestion(){
-		print ("Entered pickquestion");
 		//list of all keys in questionAnswers
 		keyList = new List<string> (questionsAnswers.Keys);
-		print ("KeyList assigned");
 		//assign element at a random index from 0 to size of keyList to the string randomKey (will be our question)
-		print("keylist.count");
-		print (keyList.Count);
 		string randomKey = keyList[Random.Range(0, keyList.Count-1)];
-		currQuestion = randomKey;
+	//	currQuestion = randomKey;
 		assignAnswers (questionsAnswers [randomKey]);
 		return randomKey;
 
 	}
-
 	public void assignAnswers(string correct){
 		correct_index = Random.Range (0, NumChoices-1);
+		print("The correct index inside bossquestions is:");
+		print(correct_index);
 	
 		multiple_choice = new string[NumChoices];
 		multiple_choice [correct_index] = correct;
@@ -119,6 +116,7 @@ public class BossQuestions : MonoBehaviour {
 			else
 				continue;
 		}
+
 	}
 
 

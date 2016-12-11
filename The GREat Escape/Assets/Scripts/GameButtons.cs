@@ -8,12 +8,14 @@ public class GameButtons : MonoBehaviour {
 	public GameObject[] showIfPaused;
 	public GameObject[] showIfResumed;
 
+	public QuestionPanel panel;
 	public QuestionCanvas qCanvas;
 
 
 	// Use this for initialization
 	void Start () {
 		qCanvas = FindObjectOfType<QuestionCanvas> ();
+		panel = FindObjectOfType<QuestionPanel> ();
 
 		//populate array with relevant objects to show when game is paused
 		showIfPaused = GameObject.FindGameObjectsWithTag("WhenPaused");
@@ -61,6 +63,7 @@ public class GameButtons : MonoBehaviour {
 
 	public void ClearQuestionDisplay() {
 		qCanvas.disableQuestionCanvas ();
+		panel.disable ();
 		ResumeGame ();
 
 	}

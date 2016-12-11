@@ -85,6 +85,7 @@
 'Assets/Scripts/BookScript.cs'
 'Assets/Scripts/BossController.cs'
 'Assets/Scripts/BossQuestions.cs'
+'Assets/Scripts/ButtonPushed.cs'
 'Assets/Scripts/CameraController.cs'
 'Assets/Scripts/Checkpoint.cs'
 'Assets/Scripts/Collect.cs'

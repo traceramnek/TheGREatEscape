@@ -14,4 +14,8 @@ public class QuestionPanel : MonoBehaviour {
 		this.GetComponent<SpriteRenderer>().enabled = true;
 
 	}
+
+	public void disable (){
+		this.GetComponent<SpriteRenderer> ().enabled = false;
+	}
 }
