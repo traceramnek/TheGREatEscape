@@ -38,7 +38,7 @@ public class JITScript : MonoBehaviour {
 				Destroy (this.gameObject);
 				break;
 			case "BossJIT":
-				wordDisplay.text = "Get ready to battle the boss\n\n Answer the questions and keep an eye on your health meter";
+				wordDisplay.text = "Get ready to battle the boss\n\n Jump on the boss to recieve a question. Answer 3 questions right to kill the boss.";
 				Time.timeScale = 0.0f;
 				Destroy (this.gameObject);
 				break;

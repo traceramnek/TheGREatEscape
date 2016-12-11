@@ -35,8 +35,6 @@ public class HealthBar : MonoBehaviour {
 		if (current == 0)
 		SceneManager.LoadScene ("Gameover");
 		
-		//BookScript.bookControl.ResetBooks ();
-	//	BookScript.bookControl.reviewIndices.Clear ();
 
 		
 	}
