@@ -17,8 +17,10 @@ public class BossController : MonoBehaviour {
 		if (range > minDistance && canMove)
 		{
 
-			transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);	
-		}
+			transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            transform.localScale = new Vector3(transform.position.x > target.position.x ? -5f : 5f, 
+                transform.localScale.y, transform.localScale.z);
+        }
 	}
 
 	void OnBecameVisible(){
