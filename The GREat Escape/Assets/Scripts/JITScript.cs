@@ -32,6 +32,11 @@ public class JITScript : MonoBehaviour {
 				Time.timeScale = 0.0f;
 				Destroy (this.gameObject);
 				break;
+			case "Controls":
+				wordDisplay.text = "Press the 'p' key to pause/resume, and the 'x' key to exit word displays that come up.";
+				Time.timeScale = 0.0f;
+				Destroy (this.gameObject);
+				break;
 			case "BeforeReview":
 				wordDisplay.text = "Press the up key over the door to continue to the review section.";
 				Time.timeScale = 0.0f;
