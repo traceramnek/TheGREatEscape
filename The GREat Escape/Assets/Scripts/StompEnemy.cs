@@ -65,6 +65,8 @@ public class StompEnemy : MonoBehaviour {
 			Time.timeScale = 0.0f;
 
 			ques = boss.pickQuestion ();
+			print ("ques is");
+			print (ques);
 			questionDisplay.text = ques;
 			MC ();
 

@@ -4449,6 +4449,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21848fc50d62046689aa6604051c62ce, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1609127712 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013617396336, guid: 21848fc50d62046689aa6604051c62ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1609127711}
+  m_Script: {fileID: 11500000, guid: d5b1d7671759e4b29ab43153380b4ff2, type: 3}
 --- !u!1 &1616645681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,7 +4632,7 @@ MonoBehaviour:
   choice3: {fileID: 668007971}
   choice4: {fileID: 5561798}
   qCanvas: {fileID: 1368145745}
-  panel: {fileID: 0}
+  panel: {fileID: 1609127712}
   answer: 0
 --- !u!61 &1625991542
 BoxCollider2D:

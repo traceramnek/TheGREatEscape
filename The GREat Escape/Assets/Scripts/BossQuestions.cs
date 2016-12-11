@@ -15,7 +15,7 @@ public class BossQuestions : MonoBehaviour {
 	public int numWords = BookScript.bookControl.words.Length;
 	public char delim, delim2;
 	public string wrdTmp, defTmp, currQuestion;
-	public SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
+	public static SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
 	public List<string> answerOptions;
 	public List<string> keyList;
 	public string[] multiple_choice; //Array of multiple choice options
@@ -102,11 +102,13 @@ public class BossQuestions : MonoBehaviour {
 	}
 	public string pickQuestion(){
 		//list of all keys in questionAnswers
+		print("inside pickQuestion");
 		keyList = new List<string> (questionsAnswers.Keys);
 
 		//assign element at a random index from 0 to size of keyList to the string randomKey (will be our question)
 		string randomKey = keyList[Random.Range(0, keyList.Count-1)];
-
+		print ("randomkey chose:");
+		print (randomKey);
 		while (isQuesUsed (randomKey)) {
 		  randomKey = keyList[Random.Range(0, keyList.Count-1)];
 		}
