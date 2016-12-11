@@ -30,10 +30,13 @@ public class GameButtons : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (!string.IsNullOrEmpty(GameObject.FindGameObjectWithTag("WordDisplay").GetComponent<Text>().text.Trim()) &&
-            Input.GetKeyDown("x"))
+        if (GameObject.FindGameObjectWithTag("WordDisplay") != null)
         {
-            ClearWordDisplay();
+            if (!string.IsNullOrEmpty(GameObject.FindGameObjectWithTag("WordDisplay").GetComponent<Text>().text.Trim()) &&
+                Input.GetKeyDown("x"))
+            {
+                ClearWordDisplay();
+            }
         }
 	}
 
