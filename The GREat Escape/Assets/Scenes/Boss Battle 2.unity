@@ -120,7 +120,7 @@ Transform:
   - {fileID: 908184158}
   - {fileID: 1833490280}
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 49
 --- !u!1001 &78294258
 Prefab:
   m_ObjectHideFlags: 0
@@ -4614,7 +4614,7 @@ Transform:
   - {fileID: 938316132}
   - {fileID: 345863283}
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
 --- !u!1001 &1330518978
 Prefab:
   m_ObjectHideFlags: 0
@@ -5538,6 +5538,16 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 247317609}
+    - target: {fileID: 114000013135944390, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1801066150}
+    - target: {fileID: 114000013135944390, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClearQuestionDisplay
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21848fc50d62046689aa6604051c62ce, type: 2}
   m_IsPrefabParent: 0
@@ -5718,7 +5728,7 @@ RectTransform:
   - {fileID: 960564868}
   - {fileID: 280745617}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
