@@ -30,7 +30,11 @@ public class GameButtons : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//Button key press instead of click
+        if (!string.IsNullOrEmpty(GameObject.FindGameObjectWithTag("WordDisplay").GetComponent<Text>().text.Trim()) &&
+            Input.GetKeyDown("x"))
+        {
+            ClearWordDisplay();
+        }
 	}
 
 	public void PauseGame(){
