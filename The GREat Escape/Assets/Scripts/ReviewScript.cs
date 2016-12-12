@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class ReviewScript : MonoBehaviour {
-	
+
 	const int NUM_REVIEW_WORDS = 4;
-	public static int reviewNum = 0;
+	public static int reviewNum = 1;
 	public int canSetRev = 2; //used to mod
 	public Text revWord1, revWord2, revWord3, revWord4;
 	//public Text [] reviewwords;
@@ -15,13 +15,13 @@ public class ReviewScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		updateReviewNum ();
+		//	updateReviewNum ();
 		//setReviewWords ();
 	}
 
 	public static void updateReviewNum(){
-			reviewNum++;
-		
+		reviewNum++;
+
 	}
 
 	public void setReviewWords(){
@@ -33,6 +33,7 @@ public class ReviewScript : MonoBehaviour {
 			revWord2.text = BookScript.bookControl.reviewWords [1];
 			revWord3.text = BookScript.bookControl.reviewWords [2];
 			revWord4.text = BookScript.bookControl.reviewWords [3];
+			updateReviewNum ();
 			break;
 		case 2:	
 			revWord1.text = BookScript.bookControl.reviewWords [4];
@@ -40,12 +41,13 @@ public class ReviewScript : MonoBehaviour {
 			revWord3.text = BookScript.bookControl.reviewWords [6];
 			revWord4.text = BookScript.bookControl.reviewWords [7];
 			break;
+
 		default:
 			// nothing
 			break;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (SceneManager.GetActiveScene ().name == "Review1") {
