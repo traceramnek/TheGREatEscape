@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 	public AudioSource hurtSound; 
 	public AudioSource rightSound;
 	public AudioSource wrongSound;
+	public AudioSource collectSound;
 	public bool isPaused;
 
 	public HealthBar health;
@@ -131,8 +132,7 @@ public class PlayerController : MonoBehaviour {
 //			numBooks++;
 //			numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
 			BookScript.bookControl.updateBookTracker();
-			Collect c = other.GetComponent<Collect> ();
-			c.Sound ();
+			collectSound.Play ();
 
 			other.GetComponent<SpriteRenderer> ().enabled = false;
 			other.GetComponent<BoxCollider2D> ().enabled = false;
@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour {
 				//	gameObject.SetActive (false);
 
 				transform.position = respawnPosition;
-				health.changeBar (10);
+				health.changeBar (5);
 
 			}
 

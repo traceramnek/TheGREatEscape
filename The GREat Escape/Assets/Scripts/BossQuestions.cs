@@ -116,6 +116,7 @@ public class BossQuestions : MonoBehaviour {
 		return randomKey;
 
 	}
+
 	public void assignAnswers(string correct){
 		correct_index = Random.Range (0, NumChoices-1);
 		print("The correct index inside bossquestions is:");
@@ -127,7 +128,7 @@ public class BossQuestions : MonoBehaviour {
 		for (int i = 0; i <= NumChoices-1; i++) {
 			if (i != correct_index) {
 				int rand = Random.Range (0, answerOptions.Count - 1);
-				if (answerOptions [rand] != correct)
+				if (answerOptions [rand] != correct )
 					multiple_choice [i] = answerOptions [rand];
 				else
 					i++;

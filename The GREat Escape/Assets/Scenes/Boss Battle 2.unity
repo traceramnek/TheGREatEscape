@@ -3271,9 +3271,9 @@ GameObject:
   - 212: {fileID: 1024465860}
   - 95: {fileID: 1024465859}
   - 50: {fileID: 1024465858}
-  - 61: {fileID: 1024465857}
   - 114: {fileID: 1024465856}
   - 114: {fileID: 1024465861}
+  - 60: {fileID: 1024465857}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -3307,8 +3307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1787763179}
   speed: 4
---- !u!61 &1024465857
-BoxCollider2D:
+--- !u!60 &1024465857
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3318,9 +3318,28 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.02, y: -0.02}
-  serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.57}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.024280597, y: -0.21264294}
+      - {x: 0.047852375, y: -0.16735707}
+      - {x: 0.06520772, y: -0.12471408}
+      - {x: -0.011437178, y: -0.029644316}
+      - {x: 0.024854327, y: 0.07207113}
+      - {x: -0.0075721266, y: 0.29506978}
+      - {x: -0.012287092, y: 0.34678525}
+      - {x: -0.16035686, y: 0.3441423}
+      - {x: -0.13656993, y: 0.1905718}
+      - {x: -0.084853314, y: 0.09700137}
+      - {x: -0.046709396, y: -0.0005718187}
+      - {x: -0.05992503, y: -0.11057182}
+      - {x: -0.0504951, y: -0.17999999}
+      - {x: -0.05256572, y: -0.21013951}
+      - {x: -0.0827827, y: -0.25692472}
+      - {x: 0.06899648, y: -0.2886402}
+    - - {x: -0.11, y: -0.07}
+      - {x: -0.089999996, y: -0.089999996}
+      - {x: -0.089999996, y: -0.08}
 --- !u!50 &1024465858
 Rigidbody2D:
   serializedVersion: 2
@@ -4028,7 +4047,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 60
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -6222,7 +6241,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 56
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

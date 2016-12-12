@@ -32,7 +32,7 @@ public class HealthBar : MonoBehaviour {
 		current = current - change;
 		content.fillAmount = Map (current, 0, 50, 0, 1);
 
-		if (current == 0)
+		if (current <= 0)
 		SceneManager.LoadScene ("Gameover");
 		
 

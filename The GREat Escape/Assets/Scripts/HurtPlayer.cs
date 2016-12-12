@@ -19,7 +19,7 @@ public class HurtPlayer : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
-			Health.changeBar (10);
+			Health.changeBar (5);
 			Player.hurtSound.Play ();
 		}
 	} 

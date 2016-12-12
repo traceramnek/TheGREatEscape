@@ -1453,7 +1453,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 56
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3788,9 +3788,9 @@ GameObject:
   - 212: {fileID: 1442720593}
   - 95: {fileID: 1442720595}
   - 50: {fileID: 1442720597}
-  - 61: {fileID: 1442720598}
   - 114: {fileID: 1442720596}
   - 114: {fileID: 1442720599}
+  - 60: {fileID: 1442720598}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -3891,8 +3891,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1442720598
-BoxCollider2D:
+--- !u!60 &1442720598
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3902,9 +3902,28 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.04, y: 0.04}
-  serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.57}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.021637773, y: -0.22057183}
+      - {x: 0.037279557, y: -0.18057182}
+      - {x: 0.017635394, y: -0.13}
+      - {x: 0.03085103, y: -0.037573196}
+      - {x: 0.027497148, y: 0.07207113}
+      - {x: -0.0075736525, y: 0.30299863}
+      - {x: -0.017574264, y: 0.34678525}
+      - {x: -0.17092815, y: 0.35207114}
+      - {x: -0.09692454, y: 0.15885636}
+      - {x: -0.07428203, y: 0.041499287}
+      - {x: -0.115425825, y: -0.013786604}
+      - {x: -0.08635326, y: -0.15021615}
+      - {x: -0.042566635, y: -0.17471409}
+      - {x: -0.06577983, y: -0.28149933}
+      - {x: -0.048424482, y: -0.30449793}
+      - {x: 0.07956777, y: -0.27542543}
+    - - {x: -0.11, y: -0.07}
+      - {x: -0.089999996, y: -0.089999996}
+      - {x: -0.089999996, y: -0.08}
 --- !u!114 &1442720599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4726,7 +4745,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 0
-  Priority: 60
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
