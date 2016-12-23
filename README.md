@@ -1,6 +1,6 @@
 # The GREat Escape
 
- Playable Version at Itch.io: cisc3660.itch.io/the-great-escape
+ Playable Version at Itch.io: [The GREat Escape](cisc3660.itch.io/the-great-escape)
 
 ## Description
 
