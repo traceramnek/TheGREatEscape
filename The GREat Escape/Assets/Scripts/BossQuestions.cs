@@ -18,6 +18,7 @@ public class BossQuestions : MonoBehaviour {
 	public static SortedDictionary<string,string> questionsAnswers; // map of questions and answers. Q is key, A is value
 	public List<string> answerOptions;
 	public List<string> keyList;
+	public static List<string> currAnswers; //Array used to make sure answers aren't repeated
 	public string[] multiple_choice; //Array of multiple choice options
 	public static int correct_index;
 	public static List<string> questionsUsed;
@@ -29,6 +30,7 @@ public class BossQuestions : MonoBehaviour {
 	//	answerOptions = new List<string>[NumOptions];
 		answerOptions = new List<string> ();
 		questionsUsed = new List<string> ();
+		currAnswers = new List<string> ();
 		parseCorrectWords ();
 	}
 	
@@ -124,18 +126,29 @@ public class BossQuestions : MonoBehaviour {
 	
 		multiple_choice = new string[NumChoices];
 		multiple_choice [correct_index] = correct;
+		currAnswers.Add (correct);
 
 		for (int i = 0; i <= NumChoices-1; i++) {
 			if (i != correct_index) {
 				int rand = Random.Range (0, answerOptions.Count - 1);
-				if (answerOptions [rand] != correct )
-					multiple_choice [i] = answerOptions [rand];
-				else
-					i++;
+				string ans = answerOptions [rand];
+
+				while (currAnswers.Contains (ans)) {
+					rand = Random.Range (0, answerOptions.Count - 1);
+					ans = answerOptions [rand];
+				}
+				//if (answerOptions [rand] != correct )
+				multiple_choice [i] = ans;
+				currAnswers.Add (ans);
+
 			}
+
 			else
 				continue;
+		
 		}
+
+		currAnswers.Clear ();
 
 	}
 

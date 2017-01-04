@@ -34,6 +34,7 @@ public class BossHealthBar : MonoBehaviour {
 			BookScript.bookControl.ResetBooks();
 			BossQuestions.questionsUsed.Clear ();
 			BossQuestions.questionsAnswers.Clear ();
+			BossQuestions.currAnswers.Clear ();
 			Destroy (GameObject.FindGameObjectWithTag ("Boss"));
 
 		}
