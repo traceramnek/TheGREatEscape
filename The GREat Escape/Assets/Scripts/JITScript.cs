@@ -28,7 +28,7 @@ public class JITScript : MonoBehaviour {
 				Destroy (this.gameObject);
 				break;
 			case "Objective":
-				wordDisplay.text = "Collect all of the books in the world and study their contents. \n\n Watch out for enemies and dangerous objects. Press the left and right arrow to move \n\nUse spacebar to jump.";
+				wordDisplay.text = "Collect all of the books in the world and study their contents. \n\n Watch out for enemies and dangerous objects. Press the left and right arrow to move. Use spacebar to jump.";
 				Time.timeScale = 0.0f;
 				Destroy (this.gameObject);
 				break;
@@ -49,9 +49,15 @@ public class JITScript : MonoBehaviour {
 				break;
 			case "Level2JIT":
 				BookScript.bookControl.ResetBooks ();
-				SceneManager.LoadScene("Level2");
+				SceneManager.LoadScene ("Level2");
 				break;
-			}
+			
+			case "Level3JIT":
+				BookScript.bookControl.ResetBooks ();
+				SceneManager.LoadScene ("Level2");
+				break;
+			
+		}
 
 
 		}

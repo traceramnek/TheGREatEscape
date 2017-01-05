@@ -23,7 +23,12 @@ public class MenuButtons : MonoBehaviour {
 			currLevel++;
 		} else if (currLevel == 2) {
 			GoToBoss2 ();
+			currLevel++;
+		} else if (currLevel == 3) {
+			GoToBoss3 ();
+			currLevel++;
 		}
+
 	}
 
 	public void GoToBoss(){
@@ -32,6 +37,10 @@ public class MenuButtons : MonoBehaviour {
 
 	public void GoToBoss2(){
 		SceneManager.LoadScene ("Boss Battle 2");
+	}
+
+	public void GoToBoss3(){
+		SceneManager.LoadScene ("Boss Battle 3");
 	}
 
 	public void GoToInstructions(){

@@ -155,14 +155,16 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 
-			if (other.tag == "Door2") {
-				if (BossHealthBar.current == 0) {
-					SceneManager.LoadScene ("Level2");
-				}
-		
+		if (other.tag == "Door2") {
+			if (BossHealthBar.current == 0) {
+				SceneManager.LoadScene ("Level2");
 			}
-
+		}
 		if (other.tag == "Door3") {
+			if (BossHealthBar.current == 0)
+				SceneManager.LoadScene ("Level3");
+		}
+		if (other.tag == "Door4") {
 			if (BossHealthBar.current == 0)
 				SceneManager.LoadScene ("Win");
 		}
