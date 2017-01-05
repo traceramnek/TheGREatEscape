@@ -56,7 +56,17 @@ public class BookScript : MonoBehaviour {
 			"Abscond: Run away, often taking something or somebody along.\n\n He made plans to abscond with the stolen money.",
 			"Distend: Cause to expand as if by iternal pressure.\n\n The excess food consumption made her stomach distend from bloat.",
 			"Gouge: An impression in a surface, as made by a blow.\n\n The channel had been gouged out by the ebbing water.",
-
+			"Levee: An embankment built to prevent a river from overflowing.\n\n Vulnerable coastal cities may build levees and seawalls."
+			"Coda: The closing section of a musical composition.\n\n So, appealingly, does the ever-adaptable Beck, who sings on the album’s coda, 'Tiny Cities.' "
+			"Abstemious: Marked by temperance in indulgence.\n\n Melania was abstemious and more wholesome than the other girls, he said, and they started dating."
+			"Commensurate: Corresponding in size or degree or extent.\n\n We lived on expenses, just as successful businessmen do today, but without a commensurate salary."
+			"Distill: Undergo condensation.\n\n Makers of saline rinses typically suggest using distilled water for safety, rather than tap."
+			"Grandiloquent: Lofty in style.\n\n But while the musical setting is grandiloquent, Cooke’s tale is down-to-earth."
+			"Levity: A manner lacking seriousness.\n\n They both laughed, which made Mark wonder where all the sudden levity had come from."
+			"Admonish: Scold or reprimand; take to task.\n\n But the judge called some of Kyros' conduct 'highly unprofessional,' and admonished him to follow the rules."
+			"Compendium: A publication containing a variety of works.\n\n There are 73 films on this year’s Black List, the annual compendium of popular unproduced screenplays."
+			"Gregarious: Temperamentally seeking and enjoying the company of others.\n\n He has great relationships with his friends due to his gregarious personality."
+			"Diverge: Move or draw apart.\n\n Now this is where the stories offered by the boy and the State begin to diverge slightly."
 		};
 
 		reviewIndices = new List<int>();
