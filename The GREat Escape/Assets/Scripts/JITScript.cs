@@ -28,12 +28,12 @@ public class JITScript : MonoBehaviour {
 				Destroy (this.gameObject);
 				break;
 			case "Objective":
-				wordDisplay.text = "Collect all of the books in the world and study their contents. \n\n Watch out for enemies and dangerous objects. Press the left and right arrow to move. Use spacebar to jump.";
+				wordDisplay.text = "Collect all of the books in the world and study their contents. \n\n Watch out for enemies and dangerous objects. Press the left and right arrow to move.";
 				Time.timeScale = 0.0f;
 				Destroy (this.gameObject);
 				break;
 			case "Controls":
-				wordDisplay.text = "Press the 'p' key to pause/resume, and the 'x' key to exit word displays that come up.";
+				wordDisplay.text = "Press the 'p' key to pause/resume, and the 'x' key to exit word displays that come up. \n\n Press Spacebar to jump.";
 				Time.timeScale = 0.0f;
 				Destroy (this.gameObject);
 				break;
