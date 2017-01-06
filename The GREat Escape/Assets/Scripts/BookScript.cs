@@ -51,7 +51,7 @@ public class BookScript : MonoBehaviour {
 			"Latent: Potentially existing but not presently evident or realized.\n\n The detective asked the lab technician to search the room for latent fingerprints.",
 			"Aberrant: Markedly different from an accepted norm.\n\n Sarah's aberrant manners led to her being kicked out of the movie theater.",
 			"Abeyance: Temporary cessation or suspension.\n\n Jane's cancer has returned after being in abeyance for nearly two years.",
-			"Dissonance: A lack of agreement.\n\n There is a great deal of dissonance between what a liar says and does.",
+			"Dissonance: A lack of agreement, may refer to sounds.\n\n There is a great deal of dissonance between what a liar says and does.",
 			"Goad: Prove or annoy so as to stimulate some action or reaction.\n\n Jordan tried to goad his daughter into doing her chores by freezing her allowance payments.",
 			"Abscond: Run away, often taking something or somebody along.\n\n He made plans to abscond with the stolen money.",
 			"Distend: Cause to expand as if by iternal pressure.\n\n The excess food consumption made her stomach distend from bloat.",
