@@ -52,14 +52,10 @@ public class JITScript : MonoBehaviour {
 				SceneManager.LoadScene ("Level2");
 				break;
 			
-			case "Level3JIT":
-				BookScript.bookControl.ResetBooks ();
-				SceneManager.LoadScene ("Level2");
-				break;
-			
-		}
-
-
+			}
 		}
 	}
+
+
+
 }
