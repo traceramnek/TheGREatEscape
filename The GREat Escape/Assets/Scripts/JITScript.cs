@@ -33,7 +33,7 @@ public class JITScript : MonoBehaviour {
 				Destroy (this.gameObject);
 				break;
 			case "Controls":
-				wordDisplay.text = "Press the 'p' key to pause/resume, and the 'x' key to exit word displays that come up. \n\n Press Spacebar to jump.";
+				wordDisplay.text = "Press the 'p' key to pause/resume. \n\n Press Spacebar to jump.";
 				Time.timeScale = 0.0f;
 				Destroy (this.gameObject);
 				break;
