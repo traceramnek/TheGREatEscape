@@ -63,7 +63,7 @@ public class BookScript : MonoBehaviour {
 			"Distill: Undergo condensation.\n\n Makers of saline rinses typically suggest using distilled water for safety, rather than tap.",
 			"Grandiloquent: Lofty in style.\n\n But while the musical setting is grandiloquent, Cookes tale is down-to-earth.",
 			"Levity: A manner lacking seriousness.\n\n They both laughed, which made Mark wonder where all the sudden levity had come from.",
-			"Admonish: Scold or reprimand; take to task.\n\n But the judge called some of Kyros conduct 'highly unprofessional,' and admonished him to follow the rules.",
+			"Admonish: Scold or reprimand, take to task.\n\n But the judge called some of Kyros conduct 'highly unprofessional,' and admonished him to follow the rules.",
 			"Compendium: A publication containing a variety of works.\n\n There are 73 films on this year’s Black List, the annual compendium of popular unproduced screenplays.",
 			"Gregarious: Temperamentally seeking and enjoying the company of others.\n\n He has great relationships with his friends due to his gregarious personality.",
 			"Diverge: Move or draw apart.\n\n Now this is where the stories offered by the boy and the State begin to diverge slightly."
