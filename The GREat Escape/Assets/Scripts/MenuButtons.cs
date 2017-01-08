@@ -83,6 +83,13 @@ public class MenuButtons : MonoBehaviour {
 		SceneManager.LoadScene ("Home");
 	}
 
+	public void GoToTitle(){
+		SceneManager.LoadScene ("TitleScreen");
+	}
+	public void GoToCredits(){
+		SceneManager.LoadScene ("Credits");
+	}
+
 	public void GoToNextLevel(){
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // go to next level in game
 	}

@@ -1,0 +1,94 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="MenuButtons">
+			<method name="HomeScreen"/>
+			<method name="GoToWelcome"/>
+			<method name="HomeScreen"/>
+			<method name="HomeScreen"/>
+			<method name="GoToInstructions"/>
+			<method name="QuitGame"/>
+			<method name="Settings"/>
+			<method name="HomeScreen"/>
+			<method name="PickBossToGoTo"/>
+			<method name="HomeScreen"/>
+			<method name="Settings"/>
+			<method name="GoToInstructions"/>
+			<method name="QuitGame"/>
+			<method name="HomeScreen"/>
+			<method name="GoToInstructions"/>
+			<method name="QuitGame"/>
+			<method name="Settings"/>
+			<method name="HomeScreen"/>
+			<method name="QuitGame"/>
+			<method name="GoToInstructions"/>
+			<method name="Settings"/>
+			<method name="ResumeGame"/>
+			<method name="HomeScreen"/>
+			<method name="HomeScreen"/>
+			<method name="GoToEnterName"/>
+			<method name="QuitGame"/>
+			<method name="TryAgain"/>
+			<method name="Settings"/>
+			<method name="ResumeGame"/>
+			<method name="GoToLevel2"/>
+			<method name="GoToEnterName"/>
+			<method name="GoToInstructions"/>
+			<method name="HomeScreen"/>
+			<method name="GoToCredits"/>
+			<method name="HomeScreen"/>
+			<method name="GoToInstructions"/>
+			<method name="QuitGame"/>
+			<method name="Settings"/>
+			<method name="HomeScreen"/>
+			<method name="GoToTitle"/>
+		</type>
+		<type fullname="EnterNameScript">
+			<method name="BackToTitle"/>
+			<method name="Continue"/>
+		</type>
+		<type fullname="PersistenceSceneController">
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+			<method name="SavePlayerData"/>
+		</type>
+		<type fullname="GameButtons">
+			<method name="ClearWordDisplay"/>
+			<method name="PauseGame"/>
+			<method name="ClearWordDisplay"/>
+			<method name="PauseGame"/>
+			<method name="ClearWordDisplay"/>
+			<method name="PauseGame"/>
+			<method name="ClearWordDisplay"/>
+			<method name="ClearWordDisplay"/>
+			<method name="PauseGame"/>
+			<method name="ClearWordDisplay"/>
+		</type>
+		<type fullname="ButtonPushed">
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+			<method name="Pushed"/>
+		</type>
+		<type fullname="SettingsScript">
+			<method name="toggleFullscreen"/>
+		</type>
+	</assembly>
+</linker>
